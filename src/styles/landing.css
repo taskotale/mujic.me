@@ -32,7 +32,8 @@
 
 @keyframes rotate-mini {
     0% {
-        scale: 4;
+        margin: 4;
+        padding: 5pt;
         transform: rotate(-90deg);
     }
     50% {
