@@ -1,17 +1,14 @@
 .landing-main {
     height: 100svh;
     width: 100svw;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: var(--colorOne);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .landing-logo{
-    position: absolute;
-    left: 40%;
-    top: 30%;
-    animation: rotate-mini 1s ease-in;
+    animation: rotate-mini 2s ease-in;
     transform-origin: center;
 }
 
@@ -35,7 +32,11 @@
 
 @keyframes rotate-mini {
     0% {
-        scale: 3;
+        scale: 4;
+        transform: rotate(-90deg);
+    }
+    50% {
+        scale: 4;
         transform: rotate(-90deg);
     }
     100% {
