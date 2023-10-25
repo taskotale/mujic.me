@@ -4,4 +4,72 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: var(--colorOne);
+}
+
+.landing-logo{
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    animation: rotate-mini 1s ease-in;
+    transform-origin: center;
+}
+
+.bg-letters {
+    fill: var(--colorOne);
+}
+
+
+.logo-fullName{
+    /* fill: red; */
+}
+
+.initial-T {
+    animation: showLetter 2s ease-out;
+}
+
+.initial-M {
+    animation: slideLetter 2s ease-out;
+}
+
+
+@keyframes rotate-mini {
+    0% {
+        scale: 3;
+        transform: rotate(-90deg);
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes showLetter {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideLetter {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateX(0%);
+    }
 }

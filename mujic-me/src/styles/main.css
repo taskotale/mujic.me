@@ -1,6 +1,13 @@
+:root {
+    --colorOne: rgba(217,217,217,1);
+
+}
+
+
 body {
     padding: 0;
     margin: 0;
     height: 100svh;
     width: 100svw;
+    overflow-x: hidden;
 }
