@@ -17,8 +17,10 @@
 }
 
 
-.logo-fullName{
-    /* fill: red; */
+.logo-fullName,
+.initial-M,
+.initial-T {
+    fill: var(--colorTwo);
 }
 
 .initial-T {

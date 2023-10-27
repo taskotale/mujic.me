@@ -1,0 +1,32 @@
+.btn-side {
+    box-sizing: border-box;
+    height: 10svh;
+    width: 3svw;
+    max-width: 1rem;
+    background-color: var(--colorTwo);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.side-nav-container {
+    position: absolute;
+    right: 0;
+    top: 45svh;
+    animation: slide-in 2.4s ease-in;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+    90% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+    
+}
+
+
+

@@ -1,10 +1,12 @@
 import Landing from "./components/Landing"
+import SideNav from "./components/sideNav"
 
 function App() {
 
   return (
     <>
-       <Landing />     
+       <Landing />
+       <SideNav />
     </>
   )
 }
