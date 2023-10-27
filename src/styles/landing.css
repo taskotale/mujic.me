@@ -32,12 +32,12 @@
 
 @keyframes rotate-mini {
     0% {
-        margin: 4;
+        margin: 3.5;
         padding: 5pt;
         transform: rotate(-90deg);
     }
     50% {
-        scale: 4;
+        scale: 3.5;
         transform: rotate(-90deg);
     }
     100% {
