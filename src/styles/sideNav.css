@@ -8,6 +8,10 @@
     border-bottom-left-radius: 50%;
 }
 
+.enlarge {
+    scale: 5;
+}
+
 .side-nav-container {
     position: absolute;
     right: 0;
