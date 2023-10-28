@@ -6,7 +6,10 @@ function App() {
   return (
     <>
        <Landing />
-       <SideNav />
+       <SideNav side='right'/>
+       <SideNav side='left'/>
+       <SideNav side='top'/>
+       <SideNav side='bottom'/>
     </>
   )
 }

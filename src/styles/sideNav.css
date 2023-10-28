@@ -1,23 +1,50 @@
 .btn-side {
     box-sizing: border-box;
-    height: 10svh;
-    width: 3svw;
-    max-width: 1rem;
+    height: 5rem;
+    width: 1rem;
     background-color: var(--colorTwo);
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
+    color: var(--colorOne);
 }
 
 .enlarge {
-    scale: 5;
+    transform: translateX(100%);
+    animation: slide-out 300ms ease-out;
 }
 
 .side-nav-container {
     position: absolute;
+    animation: slide-in 2.2s ease-in;
+}
+
+.left {
+    left: 0;
+    top: 45svh;
+    rotate: 180deg;
+    animation-delay: 200ms;
+}
+
+.right {
     right: 0;
     top: 45svh;
-    animation: slide-in 2.4s ease-in;
 }
+
+.top {
+    top: -2rem;
+    left: calc(100svw/2 - 0.5rem);
+    rotate: -90deg;
+    animation-delay: 300ms;
+}
+
+.bottom {
+    bottom: -2rem;
+    left: calc(100svw/2 - 0.5rem);
+    rotate: 90deg;
+    animation-delay: 100ms;
+}
+
+
 
 @keyframes slide-in {
     0% {
@@ -28,8 +55,15 @@
     }
     100% {
         transform: translateX(0%);
+    }  
+}
+@keyframes slide-out {
+    0% {
+        transform: translateX(0%);
     }
-    
+    100% {
+        transform: translateX(100%);
+    }  
 }
 
 

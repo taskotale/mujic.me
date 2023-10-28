@@ -1,15 +1,15 @@
 import '../styles/sideNav.css'
 
-export default function SideNav () {
-
+export default function SideNav ({side}) {
+    const name = 'side-nav-container ' + side
     return (
-        <div className='side-nav-container'>
+        <div className={name}>
             <button 
-                className='btn-side'
-                onClick={e=> console.log(e)}
-                >
+                className='btn-side '
+                >I
             </button>
 
         </div>
     )
 }
+
