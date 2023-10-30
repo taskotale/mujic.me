@@ -22,26 +22,26 @@
     left: 0;
     top: 45svh;
     rotate: 180deg;
-    animation-delay: 200ms;
+    animation-delay: 300ms;
 }
 
 .right {
     right: 0;
     top: 45svh;
+    animation-delay: 100ms;
 }
 
 .top {
     top: -2rem;
     left: calc(100svw/2 - 0.5rem);
     rotate: -90deg;
-    animation-delay: 300ms;
 }
 
 .bottom {
     bottom: -2rem;
     left: calc(100svw/2 - 0.5rem);
     rotate: 90deg;
-    animation-delay: 100ms;
+    animation-delay: 200ms;
 }
 
 
