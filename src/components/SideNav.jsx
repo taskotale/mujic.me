@@ -8,7 +8,6 @@ export default function SideNav ({side}) {
                 className='btn-side '
                 >I
             </button>
-
         </div>
     )
 }

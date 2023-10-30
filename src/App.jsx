@@ -1,6 +1,5 @@
-import Landing from "./components/Landing"
-import SideNav from "./components/sideNav"
-
+import Landing from "./components/Landing.jsx"
+import SideNav from "./components/sideNav.jsx"
 function App() {
 
   return (
