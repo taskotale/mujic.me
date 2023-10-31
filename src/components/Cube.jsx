@@ -11,7 +11,10 @@ export default function TestSide () {
         scene[0].className = 'scene scale'
         setTimeout(function(){
             scene[0].className = 'scene start-page'
-        },1000)
+        },800)
+        setTimeout(function(){
+            scene[0].className = 'scene start-page overflow'
+        },1250)
         setShowSide('cube show-' + side)
     }
 

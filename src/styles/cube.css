@@ -38,8 +38,11 @@
   top: -10svh;
 }
 .start-page > div > div{
-  overflow: visible;
   box-shadow: none;
+}
+
+.overflow > div > div {
+  overflow: visible;
 }
 
 .cube.show-front {
@@ -76,7 +79,7 @@
   text-align: center;
   overflow: hidden;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-  transition: all 500ms;
+  transition: all 1500ms;
 }
 
 .cube__face--right {
