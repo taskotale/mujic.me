@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "../styles/cube.css"
-import Landing from "./Landing";
 
 export default function Cube () {
     
@@ -19,7 +18,7 @@ export default function Cube () {
         <>
         <div className="scene">
             <div className={showSide} >
-                <div className="cube__face cube__face--front"><Landing/></div>
+                <div className="cube__face cube__face--front">Main</div>
                 {/* removed back side for now*/}
                 {/* <div className="cube__face cube__face--back">back</div> */}
                 <div className="cube__face cube__face--right">Projects</div>

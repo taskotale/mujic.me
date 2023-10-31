@@ -2,14 +2,14 @@
     height: 100svh;
     width: 100svw;
     background-color: var(--colorOne);
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
 .landing-logo{
-    animation: rotate-mini 2s ease-in;
+    animation: rotate-mini 2000ms ease-in;
     transform-origin: center;
 }
 
@@ -25,11 +25,11 @@
 }
 
 .initial-T {
-    animation: showLetter 2s ease-out;
+    animation: showLetter 2000ms ease-out;
 }
 
 .initial-M {
-    animation: slideLetter 2s ease-out;
+    animation: slideLetter 2000ms ease-out;
 }
 
 
@@ -40,10 +40,12 @@
         transform: rotate(-90deg);
     }
     50% {
-        scale: 2;
+        scale: 3;
+        -webkit-transform: scale(3);
         transform: rotate(-90deg);
     }
     100% {
+        -webkit-transform: scale(1);
         scale: 1;
     }
 }
