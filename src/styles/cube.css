@@ -30,8 +30,6 @@
   transform: translateZ(var(--cubeHalf));
   transition: all 1s;
   top: 0;
-  
-    /* transform: scale(0.5); */
 }
 
 .start-page > div {
@@ -70,8 +68,7 @@
   position: absolute;
   width: var(--cubeSize);
   height: var(--cubeSize);
-  /* border: 1px solid grey; */
-  border-radius: 3px;
+  border-radius: 10px;
   /* line-height: var(--cubeSize);  */
   font-size: 20px;
   font-weight: bold;

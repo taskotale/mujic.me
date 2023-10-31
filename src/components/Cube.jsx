@@ -11,7 +11,7 @@ export default function TestSide () {
         scene[0].className = 'scene scale'
         setTimeout(function(){
             scene[0].className = 'scene start-page'
-        },800)
+        },1000)
         setTimeout(function(){
             scene[0].className = 'scene start-page overflow'
         },1200)
