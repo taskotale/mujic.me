@@ -1,0 +1,33 @@
+.projects-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    font-size: xx-large;
+    background-color: var(--colorOne);
+    height: 100svh;
+    width: 100svw;
+    border: 1px solid var(--colorTwo);
+}
+
+.cube-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.project-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-nav > button {
+    border: 1px solid var(--colorTwo);
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--colorTwo);
+    font-size: 10px;
+    margin: 5px;
+}

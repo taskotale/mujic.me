@@ -1,40 +1,46 @@
-import { useState } from "react";
+import { useState } from "react"
 import "../styles/cube.css"
+import { string } from "prop-types"
 
-export default function Cube () {
-    
-    const [showSide, setShowSide] = useState('cube show-')
+export default function Cube ({showSide}) {
 
-    const changeSide = (side) => {
-        const scene = document.getElementsByClassName('scene')
-        scene[0].className = 'scene scale'
-        setTimeout(function(){
-            scene[0].className = 'scene'
-        },1000)
-        setShowSide('cube show-' + side)
-    }
+    // code necessary to make cube work by itself
+
+    // const [showSide, setShowSide] = useState('cube show-')
+
+    // const changeSide = (side) => {
+    //     const scene = document.getElementsByClassName('scene')
+    //     scene[0].className = 'scene scale'
+    //     setTimeout(function(){
+    //         scene[0].className = 'scene'
+    //     },1000)
+    //     setShowSide('cube show-' + side)
+    // }
 
     return (
         <>
         <div className="scene">
             <div className={showSide} >
-                <div className="cube__face cube__face--front">Main</div>
-                {/* removed back side for now*/}
-                {/* <div className="cube__face cube__face--back">back</div> */}
-                <div className="cube__face cube__face--right">Projects</div>
-                <div className="cube__face cube__face--left">About Me</div>
+                <div className="cube__face cube__face--front">Coming soon</div>
+                <div className="cube__face cube__face--back">back</div>
+                <div className="cube__face cube__face--right">CV Maker</div>
+                <div className="cube__face cube__face--left">Bookshelf</div>
                 <div className="cube__face cube__face--top">top</div>
-                <div className="cube__face cube__face--bottom">bottom Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat rem, ducimus iusto nulla similique suscipit vel placeat voluptate. Omnis quibusdam eveniet sint exercitationem totam quasi laborum, delectus asperiores, aspernatur at ad, deserunt nihil odit illum!</div>
+                <div className="cube__face cube__face--bottom">Click</div>
             </div>
             </div>
-            <div className="btns">
+            {/* <div className="btns">
                 <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="front"> Start </button>
                 <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="right"> Projects </button>
-                {/* <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="back" > back </button> */}
+                <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="back" > back </button>
                 <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="left" > About Me </button>
                 <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="top" > top </button>
                 <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="bottom" > bottom  </button>
-            </div>
+            </div> */}
             </>
     )
+}
+
+Cube.propTypes = {
+    showSide:string
 }

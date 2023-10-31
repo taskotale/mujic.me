@@ -1,20 +1,22 @@
+import { string } from 'prop-types'
 import '../styles/sideNav.css'
+import { object } from 'prop-types'
 
 export default function SideNav ({side, goTo}) {
     const name = 'side-nav-container ' + side
-    const next = side ==='top'? 'landing-main' : side === 'right' ? 'testDiv' : side === 'bottom' ? 'testDiv2' : 'testDiv1' 
-
     
+    // not using this currently
     
-    const click = () => {
-        const currentPage = document.getElementsByClassName(current)
-        const nextPage = document.getElementsByClassName(next)
-        nextPage[0].className = next + ' move-in-' + side
+    // const next = side ==='top'? 'landing-main' : side === 'right' ? 'testDiv' : side === 'bottom' ? 'testDiv2' : 'testDiv1' 
+    // const click = () => {
+    //     const currentPage = document.getElementsByClassName(current)
+    //     const nextPage = document.getElementsByClassName(next)
+    //     nextPage[0].className = next + ' move-in-' + side
 
-        currentPage[0].className = current + ' move-out-' + side
+    //     currentPage[0].className = current + ' move-out-' + side
 
-        setNextPage(next)
-    }
+    //     setNextPage(next)
+    // }
 
     const moveTo = () => {
         goTo.current.scrollIntoView({behavior:'smooth'})
@@ -33,3 +35,7 @@ export default function SideNav ({side, goTo}) {
     )
 }
 
+SideNav.propTypes = {
+    side:string,
+    goTo:object
+}
