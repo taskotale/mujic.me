@@ -36,6 +36,10 @@
 .start-page > div {
   top: -10svh;
 }
+.start-page > div > div{
+  overflow: visible;
+  border: none
+}
 
 .cube.show-front {
   transform: translateZ(var(--cubeHalf)) rotateY(0deg);
@@ -62,12 +66,14 @@
   position: absolute;
   width: var(--cubeSize);
   height: var(--cubeSize);
+  border: 1px solid grey;
   border-radius: 3px;
   /* line-height: var(--cubeSize);  */
   font-size: 20px;
   font-weight: bold;
   color: white;
   text-align: center;
+  overflow: hidden;
 }
 
 .cube__face--right {
