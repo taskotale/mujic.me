@@ -29,7 +29,7 @@ export default function Projects ({pointer, setModal}) {
             </div>
 
             <div className="project-nav">
-                Projects
+                
                 <div>
                     <button onClick={e=>changeSide(e.target.value)} value='left'>Bookshelf</button>
                     <button onClick={e=>changeSide(e.target.value)} value='right'>CV maker</button>

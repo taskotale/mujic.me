@@ -17,14 +17,14 @@ export default function Cube ({showSide, setModal}) {
     //     setShowSide('cube show-' + side)
     // }
 
-    
+
     const links = {
         'front': 'https://google.com',
         'back': '1',
         'right': 'CV Maker',
         'left': 'Bookshelf app',
         'top': '4',
-        'bottom': '5',
+        'bottom': 'First click buttons on the side, than you can click again on the cube!',
     }
 
     const touchBump = () => {

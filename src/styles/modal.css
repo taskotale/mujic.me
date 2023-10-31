@@ -9,8 +9,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: popUp 500ms ease-out;
+    animation: popUp 500ms ease-out;    
 }
+
 
 .modal-window {
     background-color: var(--colorOne);
@@ -24,6 +25,7 @@
     padding: 1rem;
     text-align: center;
 }
+
 .modal-window > button {
     color: var(--colorTwo);
     background-color: var(--colorOne);
@@ -39,6 +41,12 @@
 @keyframes popUp {
     0% {
         opacity: 0;
+    }
+    10% {
+        transform: translateX(20%);
+    }
+    99% {
+        transform: translateX(0%);
     }
     100% {
         opacity: 1;
