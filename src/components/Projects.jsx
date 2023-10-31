@@ -35,7 +35,7 @@ export default function Projects ({pointer, setModal}) {
                     <button onClick={e=>changeSide(e.target.value)} value='right'>CV maker</button>
                     <button onClick={e=>changeSide(e.target.value)} value='front'>1 Coming soon...</button>
                     <button onClick={e=>changeSide(e.target.value)} value='top'>2 coming soon...</button>
-                    <button onClick={e=>changeSide(e.target.value)} value='bottom'>coming soon...</button>
+                    {/* <button onClick={e=>changeSide(e.target.value)} value='bottom'>coming soon...</button> */}
                     <button onClick={e=>changeSide(e.target.value)} value='back'>3 coming soon...</button>
                 </div>
             </div>

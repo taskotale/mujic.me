@@ -16,11 +16,13 @@ export default function Cube ({showSide, setModal}) {
     //     },1000)
     //     setShowSide('cube show-' + side)
     // }
+
+    
     const links = {
         'front': 'https://google.com',
         'back': '1',
-        'right': '2',
-        'left': '3',
+        'right': 'CV Maker',
+        'left': 'Bookshelf app',
         'top': '4',
         'bottom': '5',
     }
@@ -39,7 +41,7 @@ export default function Cube ({showSide, setModal}) {
                 <div className="cube__face cube__face--right"><span className="cube-text-wrapper">Right</span></div>
                 <div className="cube__face cube__face--left"><span className="cube-text-wrapper">Left</span></div>
                 <div className="cube__face cube__face--top"><span className="cube-text-wrapper">Top</span></div>
-                <div className="cube__face cube__face--bottom"><span className="cube-text-wrapper">Bottom →</span></div>
+                <div className="cube__face cube__face--bottom"><span className="cube-text-wrapper">Click →</span></div>
             </div>
             </div>
             {/* <div className="btns">
