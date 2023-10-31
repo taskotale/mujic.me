@@ -1,6 +1,6 @@
 .landing-main {
-    height: 100svh;
-    width: 100svw;
+    height: 100%;
+    width: 100%;
     background-color: var(--colorOne);
     display: flex;
     justify-content: center;
