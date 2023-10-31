@@ -28,7 +28,7 @@
   position: relative;
   transform-style: preserve-3d;
   transform: translateZ(var(--cubeHalf));
-  transition: all 1s;
+  transition: all 1000ms;
   top: 0;
 }
 
@@ -76,7 +76,7 @@
   text-align: center;
   overflow: hidden;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-  transition: all 1500ms;
+  transition: all 1000ms;
 }
 
 .cube__face--right {
