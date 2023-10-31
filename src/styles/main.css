@@ -34,3 +34,13 @@ body {
     scrollbar-width: none;  /* Firefox */
   }
 
+.test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    background-color: var(--colorOne);
+    height: 100svh;
+    width: 100svw;
+    border: 1px solid black;
+}

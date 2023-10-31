@@ -14,7 +14,7 @@
 }
 
 .side-nav-container {
-    position: absolute;
+    position: fixed;
     animation: slide-in 2.2s ease-in;
 }
 

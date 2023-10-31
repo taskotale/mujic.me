@@ -10,7 +10,20 @@
 
 .landing-logo{
     animation: rotate-mini 2000ms ease-in;
+    transition: all 500ms ease;
     transform-origin: center;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: var(--colorOne);
+    transition: all 500ms ease;
+    scale: 0.5;
+    border-radius: 3px;
 }
 
 .bg-letters {
@@ -40,8 +53,8 @@
         transform: rotate(-90deg);
     }
     50% {
-        scale: 3;
         -webkit-transform: scale(3);
+        scale: 3;
         transform: rotate(-90deg);
     }
     100% {

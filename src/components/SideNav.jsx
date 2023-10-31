@@ -1,6 +1,6 @@
 import '../styles/sideNav.css'
 
-export default function SideNav ({side, setNextPage, current}) {
+export default function SideNav ({side, goTo}) {
     const name = 'side-nav-container ' + side
     const next = side ==='top'? 'landing-main' : side === 'right' ? 'testDiv' : side === 'bottom' ? 'testDiv2' : 'testDiv1' 
 
@@ -16,12 +16,16 @@ export default function SideNav ({side, setNextPage, current}) {
         setNextPage(next)
     }
 
+    const moveTo = () => {
+        goTo.current.scrollIntoView({behavior:'smooth'})
+    }
+
     return (
         <div className={name}>
             <button 
                 className='btn-side '
                 onClick={e=>{
-                    click()
+                    moveTo()
                 }}
                 >I
             </button>
