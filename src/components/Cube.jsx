@@ -21,12 +21,12 @@ export default function Cube ({showSide}) {
         <>
         <div className="scene">
             <div className={showSide} >
-                <div className="cube__face cube__face--front">Coming soon</div>
-                <div className="cube__face cube__face--back">back</div>
-                <div className="cube__face cube__face--right">CV Maker</div>
-                <div className="cube__face cube__face--left">Bookshelf</div>
-                <div className="cube__face cube__face--top">top</div>
-                <div className="cube__face cube__face--bottom">Click</div>
+                <div className="cube__face cube__face--front"><span className="cube-text-wrapper">Bookshelf</span></div>
+                <div className="cube__face cube__face--back"><span className="cube-text-wrapper">Back</span></div>
+                <div className="cube__face cube__face--right"><span className="cube-text-wrapper">CV Maker</span></div>
+                <div className="cube__face cube__face--left"><span className="cube-text-wrapper">Left</span></div>
+                <div className="cube__face cube__face--top"><span className="cube-text-wrapper">Top</span></div>
+                <div className="cube__face cube__face--bottom"><span className="cube-text-wrapper">Click</span></div>
             </div>
             </div>
             {/* <div className="btns">

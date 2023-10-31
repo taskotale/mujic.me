@@ -13,7 +13,7 @@ body {
     height: 100svh;
     width: 100svw;
     background-color: var(--colorOne);
-    color: var(--colorTwo);
+    color: rgba(var(--colorTwo), 0.8);
 }
 
 button {
