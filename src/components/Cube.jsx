@@ -1,8 +1,8 @@
-import { useState } from "react"
 import "../styles/cube.css"
 import { string } from "prop-types"
+import { func } from "prop-types"
 
-export default function Cube ({showSide}) {
+export default function Cube ({showSide, setModal}) {
 
     // code necessary to make cube work by itself
 
@@ -16,17 +16,30 @@ export default function Cube ({showSide}) {
     //     },1000)
     //     setShowSide('cube show-' + side)
     // }
+    const links = {
+        'front': 'https://google.com',
+        'back': '1',
+        'right': '2',
+        'left': '3',
+        'top': '4',
+        'bottom': '5',
+    }
+
+    const touchBump = () => {
+        let side = showSide.split('-')
+        setModal(links[side[1]])
+    }
 
     return (
         <>
-        <div className="scene">
-            <div className={showSide} >
-                <div className="cube__face cube__face--front"><span className="cube-text-wrapper">Bookshelf</span></div>
+        <div className="scene" onClick={()=>touchBump()}>
+            <div className={showSide}>
+                <div className="cube__face cube__face--front"><span className="cube-text-wrapper">Front</span></div>
                 <div className="cube__face cube__face--back"><span className="cube-text-wrapper">Back</span></div>
-                <div className="cube__face cube__face--right"><span className="cube-text-wrapper">CV Maker</span></div>
+                <div className="cube__face cube__face--right"><span className="cube-text-wrapper">Right</span></div>
                 <div className="cube__face cube__face--left"><span className="cube-text-wrapper">Left</span></div>
                 <div className="cube__face cube__face--top"><span className="cube-text-wrapper">Top</span></div>
-                <div className="cube__face cube__face--bottom"><span className="cube-text-wrapper">Click</span></div>
+                <div className="cube__face cube__face--bottom"><span className="cube-text-wrapper">Bottom →</span></div>
             </div>
             </div>
             {/* <div className="btns">
@@ -42,5 +55,6 @@ export default function Cube ({showSide}) {
 }
 
 Cube.propTypes = {
-    showSide:string
+    showSide:string,
+    setModal:func
 }

@@ -3,8 +3,9 @@ import { object } from "prop-types"
 import '../styles/projects.css'
 import Cube from "./Cube"
 import { useState } from "react"
+import { func } from "prop-types"
 
-export default function Projects ({pointer}) {
+export default function Projects ({pointer, setModal}) {
     const [showSide, setShowSide] = useState('cube show-bottom')
 
     //changes sides from side menu
@@ -24,7 +25,7 @@ export default function Projects ({pointer}) {
             ref={pointer}
         >
             <div className="cube-wrapper">
-                <Cube showSide={showSide}/>
+                <Cube showSide={showSide} setModal={setModal}/>
             </div>
 
             <div className="project-nav">
@@ -34,7 +35,7 @@ export default function Projects ({pointer}) {
                     <button onClick={e=>changeSide(e.target.value)} value='right'>CV maker</button>
                     <button onClick={e=>changeSide(e.target.value)} value='front'>1 Coming soon...</button>
                     <button onClick={e=>changeSide(e.target.value)} value='top'>2 coming soon...</button>
-                    {/* <button onClick={e=>changeSide(e.target.value)} value='bottom'>coming soon...</button> */}
+                    <button onClick={e=>changeSide(e.target.value)} value='bottom'>coming soon...</button>
                     <button onClick={e=>changeSide(e.target.value)} value='back'>3 coming soon...</button>
                 </div>
             </div>
@@ -43,5 +44,6 @@ export default function Projects ({pointer}) {
 }
 
 Projects.propTypes = {
-    pointer: object
+    pointer: object,
+    setModal:func
 }
