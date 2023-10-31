@@ -30,7 +30,8 @@
   transform: translateZ(var(--cubeHalf));
   transition: all 1s;
   top: 0;
-  /* transform: scale(0.5); */
+  
+    /* transform: scale(0.5); */
 }
 
 .start-page > div {
@@ -38,7 +39,7 @@
 }
 .start-page > div > div{
   overflow: visible;
-  border: none
+  box-shadow: none;
 }
 
 .cube.show-front {
@@ -66,7 +67,7 @@
   position: absolute;
   width: var(--cubeSize);
   height: var(--cubeSize);
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   border-radius: 3px;
   /* line-height: var(--cubeSize);  */
   font-size: 20px;
@@ -74,6 +75,8 @@
   color: white;
   text-align: center;
   overflow: hidden;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  transition: all 500ms;
 }
 
 .cube__face--right {
