@@ -1,7 +1,7 @@
 .landing-main {
     height: 100svh;
     width: 100svw;
-    background-color: var(--colorOne);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
     display: grid;
     justify-content: center;
     align-items: center;
