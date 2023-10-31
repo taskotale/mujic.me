@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .landing-logo{
@@ -39,7 +40,7 @@
         transform: rotate(-90deg);
     }
     50% {
-        scale: 3.5;
+        scale: 2.3;
         transform: rotate(-90deg);
     }
     100% {

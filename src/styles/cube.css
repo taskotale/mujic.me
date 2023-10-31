@@ -6,33 +6,33 @@
     align-items: center;
     height: 100svh;
     width: 100svw;
-    perspective: 120svw; 
-    background-color: var(--colorTwo);
+    perspective: 100svw; 
+    background-color: var(--colorOne);
 }
 
 .cube {
-  width: 60svw;
-  height: 60svw;
+  width: var(--cubeSize);
+  height: var(--cubeSize);
   position: relative;
   transform-style: preserve-3d;
-  transform: translateZ(-30svw);
+  transform: translateZ(var(--cubeHalf));
   transition: transform 1s;
 }
 
-.cube.show-front  { transform: translateZ(-30svw) rotateY(   0deg); }
-.cube.show-right  { transform: translateZ(-30svw) rotateY( -90deg); }
-/* .cube.show-back   { transform: translateZ(-30svw) rotateY(-180deg); } */
-.cube.show-left   { transform: translateZ(-30svw) rotateY(  90deg); }
-.cube.show-top    { transform: translateZ(-30svw) rotateX( -90deg); }
-.cube.show-bottom { transform: translateZ(-30svw) rotateX(  90deg); }
+.cube.show-front  { transform: translateZ(var(--cubeHalf)) rotateY(   0deg); }
+.cube.show-right  { transform: translateZ(var(--cubeHalf)) rotateY( -90deg); }
+/* .cube.show-back   { transform: translateZ(var(--cubeHalf)) rotateY(-180deg); } */
+.cube.show-left   { transform: translateZ(var(--cubeHalf)) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(var(--cubeHalf)) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(var(--cubeHalf)) rotateX(  90deg); }
 
 .cube__face {
   position: absolute;
-  width: 60svw;
-  height: 60svw;
-  border: 2px solid black;
+  width: var(--cubeSize);
+  height: var(--cubeSize);
+  /* border: 1px solid black; */
   border-radius: 1svw;
-  line-height: 60svw;
+  line-height: var(--cubeSize);
   font-size: 40px;
   font-weight: bold;
   color: white;
@@ -45,9 +45,9 @@
 .cube__face--top    { background: var(--colorOne); }
 .cube__face--bottom { background: var(--colorOne); }
 
-.cube__face--front  { transform: rotateY(  0deg) translateZ(30svw); }
-.cube__face--right  { transform: rotateY( 90deg) translateZ(30svw); }
+.cube__face--front  { transform: rotateY(  0deg) translateZ(var(--cubeHalf)); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(var(--cubeHalf)); }
 /* .cube__face--back   { transform: rotateY(180deg) translateZ(30svw); } */
-.cube__face--left   { transform: rotateY(-90deg) translateZ(30svw); }
-.cube__face--top    { transform: rotateX( 90deg) translateZ(30svw); }
-.cube__face--bottom { transform: rotateX(-90deg) translateZ(30svw); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(var(--cubeHalf)); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(var(--cubeHalf)); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(var(--cubeHalf)); }

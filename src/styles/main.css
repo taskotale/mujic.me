@@ -1,6 +1,9 @@
 :root {
     --colorOne: rgba(217,217,217,1);
-    --colorTwo: #6C757D
+    --colorTwo: #6C757D;
+
+    --cubeSize: 200px;
+    --cubeHalf: 100px
 }
 
 
