@@ -14,7 +14,7 @@ export default function TestSide () {
         },800)
         setTimeout(function(){
             scene[0].className = 'scene start-page overflow'
-        },1250)
+        },1200)
         setShowSide('cube show-' + side)
     }
 
@@ -28,7 +28,7 @@ export default function TestSide () {
                 <div className="cube__face cube__face--right">Projects</div>
                 <div className="cube__face cube__face--left">About Me</div>
                 <div className="cube__face cube__face--top">top</div>
-                <div className="cube__face cube__face--bottom">bottom <p></p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat rem, ducimus iusto nulla similique suscipit vel placeat voluptate. Omnis quibusdam eveniet sint exercitationem totam quasi laborum, delectus asperiores, aspernatur at ad, deserunt nihil odit illum!</div>
+                <div className="cube__face cube__face--bottom">bottom Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat rem, ducimus iusto nulla similique suscipit vel placeat voluptate. Omnis quibusdam eveniet sint exercitationem totam quasi laborum, delectus asperiores, aspernatur at ad, deserunt nihil odit illum!</div>
             </div>
             </div>
             <div className="btns">
