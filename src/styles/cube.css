@@ -1,6 +1,6 @@
 :root {
-  --cubeSize: 50svw;
-  --cubeHalf: 25svw
+  --cubeSize: 40svw;
+  --cubeHalf: 20svw
 }
 
 .btns {
@@ -32,17 +32,6 @@
   top: 0;
 }
 
-.start-page > div {
-  top: -10svh;
-}
-.start-page > div > div{
-  box-shadow: none;
-}
-
-.overflow > div > div {
-  overflow: visible;
-}
-
 .cube.show-front {
   transform: translateZ(var(--cubeHalf)) rotateY(0deg);
 }
@@ -69,7 +58,7 @@
   width: var(--cubeSize);
   height: var(--cubeSize);
   border-radius: 10px;
-  /* line-height: var(--cubeSize);  */
+  line-height: var(--cubeSize); 
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -132,10 +121,7 @@
 
 @media screen and (orientation: landscape) {
   :root {
-    --cubeSize: 60svh;
-    --cubeHalf: 30svh
-  }
-  .start-page > div {
-    top: 0;
+    --cubeSize: 50svh;
+    --cubeHalf: 25svh
   }
 }

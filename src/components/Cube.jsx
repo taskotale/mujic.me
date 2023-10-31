@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../styles/cube.css"
 import Landing from "./Landing";
 
-export default function TestSide () {
+export default function Cube () {
     
     const [showSide, setShowSide] = useState('cube show-')
 
@@ -10,11 +10,8 @@ export default function TestSide () {
         const scene = document.getElementsByClassName('scene')
         scene[0].className = 'scene scale'
         setTimeout(function(){
-            scene[0].className = 'scene start-page'
+            scene[0].className = 'scene'
         },1000)
-        setTimeout(function(){
-            scene[0].className = 'scene start-page overflow'
-        },1200)
         setShowSide('cube show-' + side)
     }
 

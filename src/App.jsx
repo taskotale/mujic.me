@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Cube />
+      <Landing />
     </>
   )
 }
