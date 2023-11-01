@@ -1,13 +1,22 @@
 :root {
   --cubeSize: 200px;
   --cubeHalf: 100px;
-  --cubeFaceBackground: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  /* --cubeFaceBackground: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%); */
+  /* --cubeFaceBackground: linear-gradient(to bottom, #b0b0b0, #888); */
+  /* --cubeFaceBackground: linear-gradient(135deg, #ffa382, #ff8f6d); */
+
 }
 
 .btns {
   z-index: 9999;
   position: relative;
   top: 0;
+}
+
+.cube-text-wrapper {
+  /* background-color: var(--colorOne); */
+  padding: 3px;
+  border-radius: 5px;
 }
 
 .scene {
@@ -52,7 +61,7 @@
   width: var(--cubeSize);
   height: var(--cubeSize);
   border: 1px solid var(--colorTwo);
-  border-radius: 1px;
+  border-radius: 3px;
   line-height: var(--cubeSize);
   font-size: 20px;
   font-weight: bold;
@@ -60,7 +69,6 @@
   text-align: center;
   overflow: hidden;
   transition: all 1000ms;
-  text-shadow: yellowgreen 1px 1px;
 }
 
 .cube.show-front {
@@ -88,27 +96,39 @@
 }
 
 .cube__face--right {
-  background: var(--cubeFaceBackground)
+  /* background: var(--cubeFaceBackground) */
+  background: linear-gradient(135deg, #2b3a57, #1f2a3f);
+
 }
 
 .cube__face--front {
-  background: var(--cubeFaceBackground)
+  /* background: var(--cubeFaceBackground) */
+  background: linear-gradient(135deg, #ffa382, #ff8f6d);
+
 }
 
 .cube__face--back {
-  background: var(--cubeFaceBackground)
+  /* background: var(--cubeFaceBackground) */
+  background: linear-gradient(135deg, #68a9a1, #4f8782);
+
 }
 
 .cube__face--left {
-  background: var(--cubeFaceBackground)
+  /* background: var(--cubeFaceBackground) */
+  background: linear-gradient(135deg, #d6a4a4, #c08b8b);
+
 }
 
 .cube__face--top {
-  background: var(--cubeFaceBackground)
+  /* background: var(--cubeFaceBackground) */
+  background: linear-gradient(135deg, #c56b58, #a45040);
+
 }
 
 .cube__face--bottom {
-  background: var(--cubeFaceBackground)
+  /* background: var(--cubeFaceBackground) */
+  background: linear-gradient(135deg, #506c82, #3b5466);
+
 }
 
 .cube__face--front {
@@ -133,12 +153,6 @@
 
 .cube__face--bottom {
   transform: rotateX(-90deg) translateZ(var(--cubeHalf));
-}
-
-.cube-text-wrapper {
-  background-color: var(--colorOne);
-  padding: 3px;
-  border-radius: 5px;
 }
 
 @keyframes switch {
