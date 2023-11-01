@@ -42,7 +42,7 @@
 }
 
 .bg-letters {
-    fill: white;
+    fill: var(--colorOne);
 }
 
 
