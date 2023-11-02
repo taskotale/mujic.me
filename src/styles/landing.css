@@ -1,18 +1,21 @@
 .landing-main {
     height: 100svh;
     width: 100svw;
-    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%); */
-    background-image: url(../static/bg3-min.png);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
+    background: linear-gradient(0deg, #21303d 40%, #38576c 90%);
     display: grid;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    z-index: 100;
 }
-
+.bg-container {
+    height: 100svh;
+    width: 100svw;
+    background-image: url(../static/bg4.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    z-index: 5;
+}
 
 .landing-logo{
     animation: rotate-mini 2000ms ease-in;
@@ -24,7 +27,18 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    z-index: -1;
+    z-index: 0;
+    box-sizing: content-box;
+    padding: 4rem;
+}
+
+.landing-img {
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
 }
 
 .fixed {
@@ -39,6 +53,7 @@
     scale: 0.5;
     border-radius: 3px;
     z-index: 99;
+    padding: 1rem;
 }
 
 .bg-letters {
@@ -68,9 +83,8 @@
         transform: rotate(-90deg);
     }
     50% {
-        z-index: 99;
         -webkit-transform: scale(3);
-        scale: 3;
+        scale: 2;
         transform: rotate(-90deg);
     }
     100% {

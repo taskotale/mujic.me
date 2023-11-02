@@ -1,6 +1,8 @@
 :root {
-    --colorOne: rgba(217,217,217,1);
-    --colorTwo: #6C757D;
+    /* --colorOne: rgba(217,217,217,1); */
+    --colorOne: #21303d;
+    /* --colorTwo: #6C757D; */
+    --colorTwo: rgba(238,200,175,255)
 }
 
 * {
@@ -13,7 +15,6 @@ body {
     height: 100svh;
     width: 100svw;
     color: var(--colorTwo);
-    background-color: var(--colorOne);
 }
 
 button {
