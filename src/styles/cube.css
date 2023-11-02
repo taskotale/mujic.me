@@ -1,10 +1,6 @@
 :root {
   --cubeSize: 200px;
   --cubeHalf: 100px;
-  /* --cubeFaceBackground: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%); */
-  /* --cubeFaceBackground: linear-gradient(to bottom, #b0b0b0, #888); */
-  /* --cubeFaceBackground: linear-gradient(135deg, #ffa382, #ff8f6d); */
-
 }
 
 .btns {
@@ -14,7 +10,6 @@
 }
 
 .cube-text-wrapper {
-  /* background-color: var(--colorOne); */
   padding: 3px;
   border-radius: 5px;
 }
@@ -22,24 +17,25 @@
 .scene {
   height: var(--cubeSize);
   width: var(--cubeSize);
-  perspective: 1000px;
+  perspective: 1200px;
   position: relative;
-  /* background-color: var(--colorOne); */
- 
 }
 
 .scene::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  transform: rotateX(-78deg) translateY(10px) translateZ(155px);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
-  bottom: 0px;
-  left: 0;
-  right: 0;
+  width: 110%;  /* a bit wider to accommodate the skewed shadow */
+  height: 120%; /* a bit taller */
+  border-radius: 40%; /* softer edge */
+  transform: rotateX(-78deg) translateY(105px) translateZ(150px);
+  background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1) 50%); /* gradient towards bottom left */
+  bottom: -10%; /* adjust for the increased height */
+  left: -5%;   /* slight adjustment for the increased width */
   z-index: -1;
+  box-shadow: 
+      -5px 5px 15px rgba(0, 0, 0, 0.15),   /* Shifted shadow to bottom left */
+      0 1px 10px rgba(0, 0, 0, 0.1);   /* Inner soft shadow for depth */
+  
 }
 
 .scale {
@@ -60,8 +56,20 @@
   position: absolute;
   width: var(--cubeSize);
   height: var(--cubeSize);
-  border: 1px solid var(--colorTwo);
-  border-radius: 3px;
+  border: 4px solid;
+  /* border: 1px solid var(--colorTwo); */
+  /* border: 2px solid #5a7a89; This is a color from the "Deep Blue Sea" gradient for example. */
+  /* border-color: #161f2a;  Darkened version of #1f2c37 */
+  box-shadow:
+  -1px -1px 0px #2e4456,   /* Slightly brighter top-left shadow */
+  1px 1px 0px #0e1925;     /* Slightly darker bottom-right shadow */
+
+  border-top-color: #293741;
+  border-left-color: #293741;
+  border-bottom-color: #161f2a;
+  border-right-color: #161f2a;
+
+  /* border-radius: 3px; */
   line-height: var(--cubeSize);
   font-size: 20px;
   font-weight: bold;
@@ -70,6 +78,7 @@
   overflow: hidden;
   transition: all 1000ms;
 }
+
 
 .cube.show-front {
   transform: translateZ(var(--cubeHalf)) rotateY(0deg);
@@ -96,38 +105,49 @@
 }
 
 .cube__face--right {
-  /* background: var(--cubeFaceBackground) */
-  background: linear-gradient(135deg, #2b3a57, #1f2a3f);
+  background: linear-gradient(to bottom,
+      #1f2c37,
+      #3a4a58,
+      #5a7a89);
 
 }
 
 .cube__face--front {
-  /* background: var(--cubeFaceBackground) */
-  background: linear-gradient(135deg, #ffa382, #ff8f6d);
+  background: linear-gradient(to bottom,
+      #1f2c37,
+      #3b4450,
+      #808b97);
 
 }
 
 .cube__face--back {
-  /* background: var(--cubeFaceBackground) */
-  background: linear-gradient(135deg, #68a9a1, #4f8782);
-
+  background: linear-gradient(to bottom,
+      #1f2c37,
+      #3b3e50,
+      #73678a);
 }
 
 .cube__face--left {
-  /* background: var(--cubeFaceBackground) */
-  background: linear-gradient(135deg, #d6a4a4, #c08b8b);
+  background: linear-gradient(to bottom,
+      #1f2c37,
+      #2c3c55,
+      #4162a1);
 
 }
 
 .cube__face--top {
-  /* background: var(--cubeFaceBackground) */
-  background: linear-gradient(135deg, #c56b58, #a45040);
+  background: linear-gradient(to bottom,
+      #1f2c37,
+      #3d424f,
+      #886870);
 
 }
 
 .cube__face--bottom {
-  /* background: var(--cubeFaceBackground) */
-  background: linear-gradient(135deg, #506c82, #3b5466);
+  background: linear-gradient(to bottom,
+      #1f2c37,
+      #354855,
+      #5a8aa1);
 
 }
 

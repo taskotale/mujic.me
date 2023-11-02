@@ -6,7 +6,15 @@
     font-size: xx-large;
     height: 100svh;
     width: 100svw;
-    background: linear-gradient(to bottom right, #2b3a57, #ffa382);
+    /* background: linear-gradient(to bottom right, #2b3a57, #ffa382); */
+    /* background: linear-gradient(to bottom, #1f2c37 40%, rgba(238, 200, 175, 255)); */
+    background: linear-gradient(45deg, 
+                            #1f2c37, 
+                            rgba(238, 200, 175, 0.8) 50%, 
+                            #1f2c37);
+
+
+
 }
 
 .cube-wrapper {

@@ -1,6 +1,6 @@
 import '../styles/projects.css';
 import Cube from './Cube';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { func, object } from 'prop-types';
 
 export default function Projects({ pointer, setModal }) {
@@ -8,18 +8,13 @@ export default function Projects({ pointer, setModal }) {
 	const [selectedSide, setSelectedSide] = useState(null);
 
 	//changes sides from side menu
-	const handleChangeSide = (side, e) => {
+	const handleChangeSide = (side) => {
 		const scene = document.getElementsByClassName('scene');
 		scene[0].className = 'scene scale';
 		setTimeout(function () {
 			scene[0].className = 'scene';
 		}, 1000);
-		// if(activeBtn) {
-		//     setActiveBtn(e.target.value)
-		// }
-		// console.log(e)
-		// e.target.className ='active'
-		// setActiveBtn(e.target)
+
 		setSelectedSide(side);
 		setShowSide('cube show-' + side);
 	};
