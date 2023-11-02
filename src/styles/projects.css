@@ -4,7 +4,6 @@
     grid-auto-columns: 1fr;
     align-items: center;
     font-size: xx-large;
-    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%); */
     height: 100svh;
     width: 100svw;
     background: linear-gradient(to bottom right, #2b3a57, #ffa382);
@@ -46,10 +45,16 @@
 
 @media screen and (max-width: 450px ) {
     .projects-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        grid-template-rows: 1fr 1fr 1fr;
     }
+
+    .project-nav {
+        grid-row: 3;
+    }
+    .cube-wrapper {
+        grid-row: 2;
+    }
+
     .project-nav > div {
         align-items: center;
         justify-content: center;

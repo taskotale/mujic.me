@@ -5,7 +5,7 @@ export default function Landing () {
     const [logoClass, setLogoClass] = useState('landing-logo')
     
     const minimizeLogo = () => {
-         if(scrollY > 300) {
+         if(scrollY > 350) {
             setLogoClass('landing-logo fixed')
         }
         else {
