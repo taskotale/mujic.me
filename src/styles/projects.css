@@ -12,9 +12,6 @@
                             #1f2c37, 
                             rgba(238, 200, 175, 0.8) 50%, 
                             #1f2c37);
-
-
-
 }
 
 .cube-wrapper {
@@ -60,6 +57,7 @@
     background-color: var(--colorTwo);
     color: var(--colorOne);
     transform: scale(1.05);
+    border: 1px solid var(--colorOne);
 }
 
 .button-text:hover {

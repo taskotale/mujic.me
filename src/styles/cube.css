@@ -1,6 +1,6 @@
 :root {
-  --cubeSize: 200px;
-  --cubeHalf: 100px;
+  --cubeSize: 250px;
+  --cubeHalf: 125px;
 }
 
 .btns {
@@ -24,18 +24,17 @@
 .scene::before {
   content: "";
   position: absolute;
-  width: 110%;  /* a bit wider to accommodate the skewed shadow */
-  height: 120%; /* a bit taller */
-  border-radius: 40%; /* softer edge */
+  width: 110%;
+  height: 120%;
+  border-radius: 40%;
   transform: rotateX(-78deg) translateY(105px) translateZ(150px);
-  background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1) 50%); /* gradient towards bottom left */
-  bottom: -10%; /* adjust for the increased height */
-  left: -5%;   /* slight adjustment for the increased width */
+  background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1) 50%);
+  bottom: -15%;
+  left: -5%;
   z-index: -1;
-  box-shadow: 
-      -5px 5px 15px rgba(0, 0, 0, 0.15),   /* Shifted shadow to bottom left */
-      0 1px 10px rgba(0, 0, 0, 0.1);   /* Inner soft shadow for depth */
-  
+  box-shadow:
+    -5px 5px 15px rgba(0, 0, 0, 0.15),
+    0 1px 10px rgba(0, 0, 0, 0.1);
 }
 
 .scale {
@@ -56,13 +55,13 @@
   position: absolute;
   width: var(--cubeSize);
   height: var(--cubeSize);
-  border: 4px solid;
+  border: 3px solid;
   /* border: 1px solid var(--colorTwo); */
   /* border: 2px solid #5a7a89; This is a color from the "Deep Blue Sea" gradient for example. */
   /* border-color: #161f2a;  Darkened version of #1f2c37 */
   box-shadow:
-  -1px -1px 0px #2e4456,   /* Slightly brighter top-left shadow */
-  1px 1px 0px #0e1925;     /* Slightly darker bottom-right shadow */
+    -1px -1px 0px #2e4456,
+    1px 1px 0px #0e1925;
 
   border-top-color: #293741;
   border-left-color: #293741;
