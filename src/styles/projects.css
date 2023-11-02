@@ -21,12 +21,17 @@
     justify-content: center;
     align-items: center;
 }
-.project-nav > div {
+
+.project-nav>div {
     display: flex;
     flex-direction: column;
 }
 
-.project-nav > div > button {
+.button-label {
+    display: flex;
+}
+
+.button-text {
     padding: 10px 20px;
     background-color: var(--colorOne);
     border: none;
@@ -36,26 +41,41 @@
     cursor: pointer;
     margin: 2px;
     transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
 }
-.project-nav > div > button:hover {
-    background-color: #ddd; 
+
+.visually-hidden {
+    display: none;
+}
+
+.button-label input:checked+.button-text {
+    background-color: var(--colorTwo);
+    color: var(--colorOne);
     transform: scale(1.05);
-  }
+}
+
+.button-text:hover {
+    background-color: var(--colorTwo);
+    color: var(--colorOne);
+    transform: scale(1.05);
+}
 
 
-@media screen and (max-width: 450px ) {
+@media screen and (max-width: 450px) {
     .projects-container {
         grid-template-rows: 1fr 1fr 1fr;
+        gap: 5svh;
     }
 
     .project-nav {
         grid-row: 3;
     }
+
     .cube-wrapper {
         grid-row: 2;
     }
 
-    .project-nav > div {
+    .project-nav>div {
         align-items: center;
         justify-content: center;
         flex-direction: row;

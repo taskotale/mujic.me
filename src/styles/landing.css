@@ -7,17 +7,18 @@
     align-items: center;
     overflow: hidden;
 }
+
 .bg-container {
     height: 100svh;
     width: 100svw;
     background-image: url(../static/bg4.png);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     z-index: 6;
 }
 
-.landing-logo{
+.landing-logo {
     animation: rotate-mini 2000ms ease-in;
     transition: all 500ms ease;
     transform-origin: center;
@@ -81,11 +82,13 @@
         padding: 5pt;
         transform: rotate(-90deg);
     }
+
     50% {
         -webkit-transform: scale(3);
         scale: 2;
         transform: rotate(-90deg);
     }
+
     100% {
         -webkit-transform: scale(1);
         scale: 1;
@@ -97,10 +100,12 @@
         opacity: 0;
         transform: translateX(-100%);
     }
+
     50% {
         opacity: 0;
         transform: translateX(-50%);
     }
+
     100% {
         opacity: 100%;
         transform: translateX(0%);
@@ -112,6 +117,7 @@
         opacity: 0;
         transform: translateX(100%);
     }
+
     50% {
         opacity: 0;
         transform: translateX(50%);
