@@ -31,28 +31,13 @@
     z-index: 0;
     box-sizing: content-box;
     padding: 4rem;
-}
-
-.landing-img {
-    position: relative;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-
+    border-radius: 3px;
+    z-index: 5;
 }
 
 .fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: auto;
-    margin: auto;
+    /* bottom: auto; */
     background-color: var(--colorOne);
-    scale: 0.5;
-    border-radius: 3px;
-    z-index: 5;
     padding: 1rem;
 }
 

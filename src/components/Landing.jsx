@@ -1,28 +1,50 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import '../styles/landing.css';
 
 export default function Landing() {
 	const [logoClass, setLogoClass] = useState('landing-logo');
 
-	const minimizeLogo = () => {
-		if (scrollY > 350) {
-			setLogoClass('landing-logo fixed');
-		} else {
-			setLogoClass('landing-logo');
-		}
-	};
+	const logoRef = useRef(null)
 
-	window.addEventListener('scroll', () => minimizeLogo());
+
+	// const minimizeLogo = () => {
+	// 	if (scrollY > 350) {
+	// 		setLogoClass('landing-logo fixed');
+	// 	} else {
+	// 		setLogoClass('landing-logo');
+	// 	}
+	// };
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (logoRef.current) {
+				const scale = calculateScale(window.scrollY);
+				logoRef.current.style.transform = `scale(${scale})`;
+				if (scale === 0.5) setLogoClass('landing-logo fixed')
+				else setLogoClass('landing-logo')
+			}
+		}
+		const calculateScale = (scrollY) => {
+			let scale = 1 - scrollY / 500; // level of scaling down
+			return Math.max(scale, 0.5); // set a minimum scale limit
+		};
+		
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
 
 	return (
 		<div className="landing-main">
 			<div className="bg-container"></div>
 			<svg
 				className={logoClass}
-				width="180"
-				height="145"
-				viewBox="0 0 100 100"
 				fill="none"
+				height="145"
+				ref={logoRef}
+				style={{ transform: `scale(1)` }}
+				viewBox="0 0 100 100"
+				width="180"
 				xmlns="http://www.w3.org/2000/svg"
 			>
 				<g clipPath="url(#clip0_0_1)">
@@ -47,7 +69,6 @@ export default function Landing() {
 					</clipPath>
 				</defs>
 			</svg>
-			{/* <img className='landing-img' src={img} alt="Silver-toned, delicate geometric designs intricately cover the entire background, harmoniously complementing gray shades." /> */}
 		</div>
 	);
 }
