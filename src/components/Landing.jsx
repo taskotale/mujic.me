@@ -6,48 +6,36 @@ export default function Landing() {
 
 	const logoRef = useRef(null)
 	const logoContainerRef = useRef(null)
-
+	
 	useEffect(() => {
 		const handleScroll = () => {
 			if (logoRef.current) {
 				const scale = calculateScale(window.scrollY);
 				logoRef.current.style.transform = `scale(${scale})`;
-				if (scale === 0.5) setLogoClass('landing-logo fixed')
-				else setLogoClass('landing-logo')
+
+				scale <= 0.6 ? setLogoClass('landing-logo fixed') : setLogoClass('landing-logo')
+
+				const logoTop = calculateTop(scrollY)
+				logoRef.current.style.top = logoTop
+
 			}
 		}
 		const calculateScale = (scrollY) => {
 			let scale = 1 - scrollY / 1000; // level of scaling down
 			return Math.max(scale, 0.5); // set a minimum scale limit
 		};
+		const calculateTop = (scrollY) => {
+			const containerH = logoContainerRef.current.getBoundingClientRect().height
+			const logoH = logoRef.current.getBoundingClientRect().height
+			let ratio = (containerH - logoH)/2
+			let changeTop = ratio - scrollY ;
+
+			return scrollY <= 5? 'auto': Math.max((changeTop), 0);
+		}
 		
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			if (logoRef.current && logoContainerRef.current) {
-				const movingDivRect = logoRef.current.getBoundingClientRect();
-				const targetDivRect = logoContainerRef.current.getBoundingClientRect();
-				// console.log(movingDivRect)
-				if (movingDivRect.top >= targetDivRect.bottom) {
-					console.log('out');
-					setLogoClass('landing-logo fixed')
-				}
-				else {
-					setLogoClass('landing-logo')
-					console.log('in')
-				}
-			}
-		};
-	
-		window.addEventListener('scroll', handleScroll);
-	
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
-	
-
 
 	return (
 		<div 
@@ -60,7 +48,7 @@ export default function Landing() {
 				fill="none"
 				height="145"
 				ref={logoRef}
-				style={{ transform: `scale(1)` }}
+				style={{ transform: `scale(1)`, top:'auto' }}
 				viewBox="0 0 100 100"
 				width="180"
 				xmlns="http://www.w3.org/2000/svg"
