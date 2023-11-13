@@ -36,7 +36,7 @@
 }
 
 .fixed {
-    /* bottom: auto; */
+    bottom: auto;
     background-color: var(--colorOne);
     padding: 1rem;
 }

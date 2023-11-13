@@ -18,13 +18,14 @@ function App() {
 				onClick={() => ref1.current.scrollIntoView({ behavior: 'smooth' })}
 				ref={ref1}
 			>
-				<Landing />
+				<Landing 
+				/>
 			</div>
-			<div className="side-btns">
+			{/* <div className="side-btns">
 				<SideNav side="right" goTo={ref2} />
 				<SideNav side="bottom" goTo={ref3} />
 				<SideNav side="left" goTo={ref4} />
-			</div>
+			</div> */}
 			<Projects pointer={ref2} setModal={setModal} />
 			<div ref={ref3} id="2" className="test">
 				3

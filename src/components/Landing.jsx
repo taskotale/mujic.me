@@ -5,15 +5,7 @@ export default function Landing() {
 	const [logoClass, setLogoClass] = useState('landing-logo');
 
 	const logoRef = useRef(null)
-
-
-	// const minimizeLogo = () => {
-	// 	if (scrollY > 350) {
-	// 		setLogoClass('landing-logo fixed');
-	// 	} else {
-	// 		setLogoClass('landing-logo');
-	// 	}
-	// };
+	const logoContainerRef = useRef(null)
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -25,7 +17,7 @@ export default function Landing() {
 			}
 		}
 		const calculateScale = (scrollY) => {
-			let scale = 1 - scrollY / 500; // level of scaling down
+			let scale = 1 - scrollY / 1000; // level of scaling down
 			return Math.max(scale, 0.5); // set a minimum scale limit
 		};
 		
@@ -33,9 +25,35 @@ export default function Landing() {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
+	useEffect(() => {
+		const handleScroll = () => {
+			if (logoRef.current && logoContainerRef.current) {
+				const movingDivRect = logoRef.current.getBoundingClientRect();
+				const targetDivRect = logoContainerRef.current.getBoundingClientRect();
+				// console.log(movingDivRect)
+				if (movingDivRect.top >= targetDivRect.bottom) {
+					console.log('out');
+					setLogoClass('landing-logo fixed')
+				}
+				else {
+					setLogoClass('landing-logo')
+					console.log('in')
+				}
+			}
+		};
+	
+		window.addEventListener('scroll', handleScroll);
+	
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+	
+
 
 	return (
-		<div className="landing-main">
+		<div 
+			className="landing-main"
+			ref={logoContainerRef}
+			>
 			<div className="bg-container"></div>
 			<svg
 				className={logoClass}
