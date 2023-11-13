@@ -25,19 +25,18 @@
     position: fixed;
     left: 0;
     right: 0;
-    /* top: auto; */
-    /* bottom: 0; */
     margin: auto;
     z-index: 0;
     box-sizing: content-box;
     padding: 4rem;
     border-radius: 3px;
     z-index: 5;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
 }
 
 .fixed {
-    /* top: 0; */
-    /* bottom: auto; */
     padding: 1rem;
     background-color: var(--colorOne);
 }

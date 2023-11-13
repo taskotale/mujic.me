@@ -4,51 +4,50 @@ import '../styles/landing.css';
 export default function Landing() {
 	const [logoClass, setLogoClass] = useState('landing-logo');
 
-	const logoRef = useRef(null)
-	const logoContainerRef = useRef(null)
-	
+	const logoRef = useRef(null);
+	const logoContainerRef = useRef(null);
+
 	useEffect(() => {
 		const handleScroll = () => {
 			if (logoRef.current) {
 				const scale = calculateScale(window.scrollY);
 				logoRef.current.style.transform = `scale(${scale})`;
 
-				scale <= 0.6 ? setLogoClass('landing-logo fixed') : setLogoClass('landing-logo')
+				scale <= 0.6
+					? setLogoClass('landing-logo fixed')
+					: setLogoClass('landing-logo');
 
-				const logoTop = calculateTop(scrollY)
-				logoRef.current.style.top = logoTop
-
+				const logoTop = calculateTop(scrollY);
+				logoRef.current.style.marginTop = logoTop;
 			}
-		}
+		};
 		const calculateScale = (scrollY) => {
 			let scale = 1 - scrollY / 1000; // level of scaling down
 			return Math.max(scale, 0.5); // set a minimum scale limit
 		};
 		const calculateTop = (scrollY) => {
-			const containerH = logoContainerRef.current.getBoundingClientRect().height
-			const logoH = logoRef.current.getBoundingClientRect().height
-			let ratio = (containerH - logoH)/2
-			let changeTop = ratio - scrollY ;
+			const containerH =
+				logoContainerRef.current.getBoundingClientRect().height;
+			const logoH = logoRef.current.getBoundingClientRect().height;
+			let ratio = (containerH - logoH) / 2;
+			let changeTop = ratio - scrollY;
 
-			return scrollY <= 5? 'auto': Math.max((changeTop), 0);
-		}
-		
+			return scrollY <= 0 ? 'auto' : Math.max(changeTop, 0);
+		};
+
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
 	return (
-		<div 
-			className="landing-main"
-			ref={logoContainerRef}
-			>
+		<div className="landing-main" ref={logoContainerRef}>
 			<div className="bg-container"></div>
 			<svg
 				className={logoClass}
 				fill="none"
 				height="145"
 				ref={logoRef}
-				style={{ transform: `scale(1)`, top:'auto' }}
+				// style={{ transform: 'scale(1)', top: 'auto' }}
 				viewBox="0 0 100 100"
 				width="180"
 				xmlns="http://www.w3.org/2000/svg"
