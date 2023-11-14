@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import '../styles/landing.css';
 
-export default function Landing() {
+export default function Landing({links}) {
 	const [logoClass, setLogoClass] = useState('landing-logo');
 
 	const logoRef = useRef(null);
@@ -41,7 +41,11 @@ export default function Landing() {
 
 	return (
 		<div className="landing-main" ref={logoContainerRef}>
-			<div className="bg-container"></div>
+			<div className="bg-container">
+				<button className='shining-button test-btn'
+				onClick={()=>links.current.scrollIntoView({behavior: 'smooth'})}
+				> </button>
+			</div>
 			<svg
 				className={logoClass}
 				fill="none"

@@ -11,6 +11,7 @@ function App() {
 	const ref3 = useRef(null);
 	const ref4 = useRef(null);
 
+	window.addEventListener('click', e=>console.log(e))
 	return (
 		<>
 			{modal && <Modal content={modal} closeModal={setModal} />}
@@ -19,6 +20,7 @@ function App() {
 				ref={ref1}
 			>
 				<Landing 
+					links={ref2}
 				/>
 			</div>
 			{/* <div className="side-btns">
