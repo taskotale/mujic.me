@@ -1,7 +1,6 @@
 .landing-main {
     height: 100svh;
     width: 100svw;
-    max-height: 2300px;
     background: linear-gradient(0deg, #21303d 40%, #38576c 90%);
     display: grid;
     justify-content: center;
@@ -12,8 +11,8 @@
 .bg-container {
     position: relative;
     height: 100svh;
-    max-height: 2300px;
     width: 100svw;
+    max-width: 2300px;
     background-image: url(../static/bg4.png);
     background-repeat: no-repeat;
     background-size: cover;
