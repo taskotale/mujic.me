@@ -47,7 +47,7 @@ export default function Landing({ links }) {
 					onClick={() =>
 						links[0].current.scrollIntoView({ behavior: 'smooth' })
 					}
-				/>
+				> </button>
 				<button
 					className="shining-button nav-page3"
 					onClick={() =>

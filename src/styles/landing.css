@@ -13,7 +13,6 @@
     height: 100svh;
     width: 100svw;
     max-width: 1300px;
-    max-height: 100svh;
     background-image: url(../static/bg4.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,24 +20,14 @@
     z-index: 6;
 }
 
-.nav-projects {
-    top: 12.2%;
-    transform: translateX(-16svh);
-    padding: 6.7svh;
+.nav-projects:hover::after {
+    content: "Projects";
 }
-
-.nav-page3 {
-    top: 4.4%;
-    transform: translateX(-6svh);
-    padding: 5.3svh;
-    animation-delay: 300ms;
+.nav-page3:hover::after {
+    content: "Something";
 }
-
-.nav-page4 {
-    bottom: 1.5%;
-    transform: translateX(8svh);
-    padding: 7svh;
-    animation-delay: 500ms;
+.nav-page4:hover::after {
+    content: "About Me";
 }
 
 .shining-button {
@@ -66,7 +55,41 @@
 
 .shining-button:hover {
     background-color: black;
+    color: white;
 }
+
+.nav-projects {
+    top: 12.5%;
+    transform: translateX(-15.5svh);
+    width: 13svh;
+    aspect-ratio: 1;
+}
+
+.nav-page3 {
+    top: 4.4%;
+    transform: translateX(-5.9svh);
+    animation-delay: 300ms;
+    width: 10.5svh;
+    aspect-ratio: 1;
+}
+
+.nav-page4 {
+    bottom: 1.5%;
+    transform: translateX(8.1svh);
+    width: 14svh;
+    aspect-ratio: 1;
+    animation-delay: 500ms;
+}
+
+.nav-projects::after,
+.nav-page3::after,
+.nav-page4::after
+ {
+    position: relative;
+    content: " ";
+    font-size: small;
+}
+
 
 @keyframes glow {
     from {
