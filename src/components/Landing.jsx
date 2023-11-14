@@ -22,7 +22,7 @@ export default function Landing({ links }) {
 			}
 		};
 		const calculateScale = (scrollY) => {
-			let scale = 1 - scrollY / 1000; // level of scaling down
+			let scale = 1 - scrollY / 500; // level of scaling down
 			return Math.max(scale, 0.5); // set a minimum scale limit
 		};
 		const calculateTop = (scrollY) => {
