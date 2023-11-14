@@ -58,7 +58,7 @@ export default function Projects({ pointer, setModal }) {
 							onChange={(e) => handleChangeSide(e.target.value)}
 							className="visually-hidden"
 						/>
-						<span className="button-text">1 Coming soon...</span>
+						<span className="button-text">DeskHelp</span>
 					</label>
 					<label className="button-label">
 						<input
@@ -69,7 +69,7 @@ export default function Projects({ pointer, setModal }) {
 							onChange={(e) => handleChangeSide(e.target.value)}
 							className="visually-hidden"
 						/>
-						<span className="button-text">2 coming soon...</span>
+						<span className="button-text">My Blog</span>
 					</label>
 					<label className="button-label">
 						<input
@@ -81,6 +81,17 @@ export default function Projects({ pointer, setModal }) {
 							className="visually-hidden"
 						/>
 						<span className="button-text">3 coming soon...</span>
+					</label>
+					<label className="button-label">
+						<input
+							type="radio"
+							name="side"
+							value="bottom"
+							checked={showSide === 'bottom'}
+							onChange={(e) => handleChangeSide(e.target.value)}
+							className="visually-hidden"
+						/>
+						<span className="button-text">4 coming soon...</span>
 					</label>
 				</div>
 			</div>
