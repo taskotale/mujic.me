@@ -12,10 +12,15 @@
     src: url(../fonts/Orbitron/Orbitron-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat/static/Montserrat-Thin.ttf);
+}
+
 * {
     box-sizing: border-box;
-    font-family: 'Orbitron';
-    letter-spacing: 2px;
+    font-family: 'Montserrat';
+    letter-spacing: 1px;
 }
 
 body {
