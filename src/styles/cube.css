@@ -115,11 +115,13 @@ hr {
 }
 
 .cube__face--right {
-  background: linear-gradient(to bottom,
+  /* background: linear-gradient(to bottom,
       #1f2c37,
       #3a4a58,
-      #5a7a89);
-
+      #5a7a89); */
+      background-image: url(../static/cvMaker1.png);
+      background-position: center;
+      background-size: contain;
 }
 
 .cube__face--front {
@@ -138,10 +140,13 @@ hr {
 }
 
 .cube__face--left {
-  background: linear-gradient(to bottom,
+  /* background: linear-gradient(to bottom,
       #1f2c37,
       #2c3c55,
-      #4162a1);
+      #4162a1); */
+      background-image: url(../static/bookshelf.png);
+      background-position: center;
+      background-size: contain;
 }
 
 .cube__face--top {

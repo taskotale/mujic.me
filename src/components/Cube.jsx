@@ -38,31 +38,31 @@ export default function Cube({ showSide, setModal }) {
 					<div className="cube__face cube__face--back">
 						<span className="cube-text-wrapper">Back</span>
 						<hr/>
-						<span className="cube-text-content">Build your pdf downloadable CV</span>
+						<span className="cube-text-content">Lorem ipsum dolor sit amet consectetur adipisicing.</span>
 						<span className="cube-text-foot">Click for more...</span>
 					</div>
 					<div className="cube__face cube__face--right">
-						<span className="cube-text-wrapper">CV Maker</span>
+						{/* <span className="cube-text-wrapper">CV Maker</span>
 						<hr/>
 						<span className="cube-text-content">Build your pdf downloadable CV</span>
-						<span className="cube-text-foot">Click for more...</span>
+						<span className="cube-text-foot">Click for more...</span> */}
 					</div>
 					<div className="cube__face cube__face--left">
-						<span className="cube-text-wrapper">Bookshelf</span>
+						{/* <span className="cube-text-wrapper">Bookshelf</span>
 						<hr/>
 						<span className="cube-text-content">Web App to keep track of your books</span>
-						<span className="cube-text-foot">Click for more...</span>
+						<span className="cube-text-foot">Click for more...</span> */}
 					</div>
 					<div className="cube__face cube__face--top">
 						<span className="cube-text-wrapper">Top</span>
 						<hr/>
-						<span className="cube-text-content">Build your pdf downloadable CV</span>
+						<span className="cube-text-content">Lorem ipsum dolor sit.</span>
 						<span className="cube-text-foot">Click for more...</span>
 					</div>
 					<div className="cube__face cube__face--bottom">
 						<span className="cube-text-wrapper">Click</span>
 						<hr/>
-						<span className="cube-text-content">Build your pdf downloadable CV</span>
+						<span className="cube-text-content">lorem9</span>
 						<span className="cube-text-foot">Click for more...</span>
 					</div>
 				</div>
