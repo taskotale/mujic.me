@@ -62,7 +62,6 @@
   box-shadow:
     -1px -1px 0px #2e4456,
     1px 1px 0px #0e1925;
-
   border-top-color: #293741;
   border-left-color: #293741;
   border-bottom-color: #161f2a;
@@ -70,7 +69,7 @@
   /* line-height: var(--cubeSize); */
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: var(--colorTwo);
   text-align: center;
   overflow: hidden;
   transition: all 1000ms;
