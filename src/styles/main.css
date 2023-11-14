@@ -7,11 +7,15 @@
     font-family: 'Zen';
     src: url(../fonts/ZenDots-Regular.ttf)
   }
-
+@font-face {
+    font-family: 'Orbitron';
+    src: url(../fonts/Orbitron/Orbitron-VariableFont_wght.ttf);
+}
 
 * {
     box-sizing: border-box;
-    font-family: 'Zen';
+    font-family: 'Orbitron';
+    letter-spacing: 2px;
 }
 
 body {

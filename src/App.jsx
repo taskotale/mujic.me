@@ -21,11 +21,6 @@ function App() {
 					links={[ref2, ref3, ref4]}
 				/>
 			</div>
-			{/* <div className="side-btns">
-				<SideNav side="right" goTo={ref2} />
-				<SideNav side="bottom" goTo={ref3} />
-				<SideNav side="left" goTo={ref4} />
-			</div> */}
 			<Projects pointer={ref2} setModal={setModal} />
 			<div ref={ref3} id="2" className="test">
 				3
