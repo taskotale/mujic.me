@@ -3,8 +3,15 @@
     --colorTwo: rgba(238, 200, 175, 255)
 }
 
+@font-face {
+    font-family: 'Zen';
+    src: url(../fonts/ZenDots-Regular.ttf)
+  }
+
+
 * {
     box-sizing: border-box;
+    font-family: 'Zen';
 }
 
 body {

@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react';
 import Landing from './components/Landing.jsx';
-import SideNav from './components/SideNav.jsx';
 import Projects from './components/Projects.jsx';
 import Modal from './components/Modal.jsx';
 
