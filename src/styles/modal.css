@@ -43,10 +43,10 @@
         opacity: 0;
     }
     10% {
-        transform: translateX(20%);
+        transform: scale(0.1);
     }
     99% {
-        transform: translateX(0%);
+        transform: scale(1);;
     }
     100% {
         opacity: 1;

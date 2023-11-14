@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import '../styles/landing.css';
 
-export default function Landing({links}) {
+export default function Landing({ links }) {
 	const [logoClass, setLogoClass] = useState('landing-logo');
 
 	const logoRef = useRef(null);
@@ -42,15 +42,24 @@ export default function Landing({links}) {
 	return (
 		<div className="landing-main" ref={logoContainerRef}>
 			<div className="bg-container">
-				<button className='shining-button nav-projects'
-				onClick={()=>links[0].current.scrollIntoView({behavior: 'smooth'})}
+				<button
+					className="shining-button nav-projects"
+					onClick={() =>
+						links[0].current.scrollIntoView({ behavior: 'smooth' })
+					}
 				/>
-				<button className='shining-button nav-page3'
-				onClick={()=>links[1].current.scrollIntoView({behavior: 'smooth'})}
-				/> 
-				<button className='shining-button nav-page4'
-				onClick={()=>links[2].current.scrollIntoView({behavior: 'smooth'})}
-				/> 
+				<button
+					className="shining-button nav-page3"
+					onClick={() =>
+						links[1].current.scrollIntoView({ behavior: 'smooth' })
+					}
+				/>
+				<button
+					className="shining-button nav-page4"
+					onClick={() =>
+						links[2].current.scrollIntoView({ behavior: 'smooth' })
+					}
+				/>
 			</div>
 			<svg
 				className={logoClass}
@@ -89,5 +98,5 @@ export default function Landing({links}) {
 }
 
 Landing.propTypes = {
-	links: Array
+	links: Array,
 };

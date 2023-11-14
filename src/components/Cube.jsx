@@ -42,7 +42,7 @@ export default function Cube({ showSide, setModal }) {
 						<span className="cube-text-wrapper">Back</span>
 					</div>
 					<div className="cube__face cube__face--right">
-						<span className="cube-text-wrapper">Right</span>
+						<span className="cube-text-wrapper">CV Maker</span>
 					</div>
 					<div className="cube__face cube__face--left">
 						<span className="cube-text-wrapper">Left</span>
