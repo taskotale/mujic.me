@@ -29,6 +29,7 @@
 .modal-window > button {
     color: var(--colorTwo);
     background-color: var(--colorOne);
+    margin-top: 2svh;
 }
 
 .question-box {

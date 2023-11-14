@@ -2,8 +2,10 @@ import '../styles/cube.css';
 import { string } from 'prop-types';
 import { func } from 'prop-types';
 
+import projectsData from '../../projects-data';
+
 export default function Cube({ showSide, setModal }) {
-	// code necessary to make cube work by itself
+	// code necessary to make cube work by itself from module
 
 	// const [showSide, setShowSide] = useState('cube show-')
 
@@ -16,19 +18,11 @@ export default function Cube({ showSide, setModal }) {
 	//     setShowSide('cube show-' + side)
 	// }
 
-	const links = {
-		front: 'https://google.com',
-		back: '1',
-		right: 'CV Maker',
-		left: 'Bookshelf app',
-		top: '4',
-		bottom:
-			'First click buttons on the side, than you can click again on the cube!',
-	};
+
 
 	const touchBump = () => {
 		let side = showSide.split('-');
-		setModal(links[side[1]]);
+		setModal(projectsData[side[1]]);
 	};
 
 	return (
