@@ -22,20 +22,20 @@
 .nav-projects {
     top: 12.2%;
     transform: translateX(-16vh);
-    padding: 6.7vh;
+    padding: 6.7svh;
 }
 
 .nav-page3 {
     top: 4.4%;
     transform: translateX(-6vh);
-    padding: 5.3vh;
+    padding: 5.3svh;
     animation-delay: 300ms;
 }
 
 .nav-page4 {
     bottom: 1.5%;
     transform: translateX(8vh);
-    padding: 7vh;
+    padding: 7svh;
     animation-delay: 500ms;
 }
 
