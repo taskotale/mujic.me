@@ -42,9 +42,15 @@ export default function Landing({links}) {
 	return (
 		<div className="landing-main" ref={logoContainerRef}>
 			<div className="bg-container">
-				<button className='shining-button test-btn'
-				onClick={()=>links.current.scrollIntoView({behavior: 'smooth'})}
-				> </button>
+				<button className='shining-button nav-projects'
+				onClick={()=>links[0].current.scrollIntoView({behavior: 'smooth'})}
+				/>
+				<button className='shining-button nav-page3'
+				onClick={()=>links[1].current.scrollIntoView({behavior: 'smooth'})}
+				/> 
+				<button className='shining-button nav-page4'
+				onClick={()=>links[2].current.scrollIntoView({behavior: 'smooth'})}
+				/> 
 			</div>
 			<svg
 				className={logoClass}
@@ -81,3 +87,7 @@ export default function Landing({links}) {
 		</div>
 	);
 }
+
+Landing.propTypes = {
+	links: Array
+};

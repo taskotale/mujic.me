@@ -20,7 +20,7 @@ function App() {
 				ref={ref1}
 			>
 				<Landing 
-					links={ref2}
+					links={[ref2, ref3, ref4]}
 				/>
 			</div>
 			{/* <div className="side-btns">
