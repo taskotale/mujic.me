@@ -84,23 +84,23 @@
 }
 
 .cube.show-right {
-  transform: translateZ(var(--cubeHalf)) rotateY(-90deg);
+  transform: translateZ(var(--cubeHalf)) rotateY(-90.1deg);
 }
 
 .cube.show-back {
-  transform: translateZ(var(--cubeHalf)) rotateY(-180deg);
+  transform: translateZ(var(--cubeHalf)) rotateY(180deg);
 }
 
 .cube.show-left {
-  transform: translateZ(var(--cubeHalf)) rotateY(90deg);
+  transform: translateZ(var(--cubeHalf)) rotateY(90.1deg);
 }
 
 .cube.show-top {
-  transform: translateZ(var(--cubeHalf)) rotateX(-90deg);
+  transform: translateZ(var(--cubeHalf)) rotateX(-90.1deg);
 }
 
 .cube.show-bottom {
-  transform: translateZ(var(--cubeHalf)) rotateX(90deg);
+  transform: translateZ(var(--cubeHalf)) rotateX(90.1deg);
 }
 
 .cube__face--right {
@@ -131,7 +131,6 @@
       #1f2c37,
       #2c3c55,
       #4162a1);
-
 }
 
 .cube__face--top {
@@ -155,7 +154,7 @@
 }
 
 .cube__face--right {
-  transform: rotateY(90deg) translateZ(var(--cubeHalf));
+  transform: rotateY(90.1deg) translateZ(var(--cubeHalf));
 }
 
 .cube__face--back {
@@ -163,15 +162,15 @@
 }
 
 .cube__face--left {
-  transform: rotateY(-90deg) translateZ(var(--cubeHalf));
+  transform: rotateY(-90.1deg) translateZ(var(--cubeHalf));
 }
 
 .cube__face--top {
-  transform: rotateX(90deg) translateZ(var(--cubeHalf));
+  transform: rotateX(90.1deg) translateZ(var(--cubeHalf));
 }
 
 .cube__face--bottom {
-  transform: rotateX(-90deg) translateZ(var(--cubeHalf));
+  transform: rotateX(-90.1deg) translateZ(var(--cubeHalf));
 }
 
 @keyframes switch {

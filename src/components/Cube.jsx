@@ -55,14 +55,7 @@ export default function Cube({ showSide, setModal }) {
 					</div>
 				</div>
 			</div>
-			{/* <div className="btns">
-                <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="front"> Start </button>
-                <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="right"> Projects </button>
-                <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="back" > back </button>
-                <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="left" > About Me </button>
-                <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="top" > top </button>
-                <button name="rotate-cube-side" onClick={e=>changeSide(e.target.value)} value="bottom" > bottom  </button>
-            </div> */}
+
 		</>
 	);
 }
