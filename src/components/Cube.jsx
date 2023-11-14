@@ -43,6 +43,7 @@ export default function Cube({ showSide, setModal }) {
 					</div>
 					<div className="cube__face cube__face--right">
 						<span className="cube-text-wrapper">CV Maker</span>
+						<span className="cube-text-content">Build your pdf downloadable CV</span>
 					</div>
 					<div className="cube__face cube__face--left">
 						<span className="cube-text-wrapper">Left</span>
@@ -51,7 +52,8 @@ export default function Cube({ showSide, setModal }) {
 						<span className="cube-text-wrapper">Top</span>
 					</div>
 					<div className="cube__face cube__face--bottom">
-						<span className="cube-text-wrapper">Click →</span>
+						<span className="cube-text-wrapper">Click</span>
+						<span className='cube-text-content'>on the buttons to see some of my projects</span>
 					</div>
 				</div>
 			</div>

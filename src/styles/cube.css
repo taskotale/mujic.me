@@ -13,6 +13,9 @@
   padding: 3px;
   border-radius: 5px;
 }
+.cube-text-content {
+  font-size: medium;
+}
 
 .scene {
   height: var(--cubeSize);
@@ -56,9 +59,6 @@
   width: var(--cubeSize);
   height: var(--cubeSize);
   border: 3px solid;
-  /* border: 1px solid var(--colorTwo); */
-  /* border: 2px solid #5a7a89; This is a color from the "Deep Blue Sea" gradient for example. */
-  /* border-color: #161f2a;  Darkened version of #1f2c37 */
   box-shadow:
     -1px -1px 0px #2e4456,
     1px 1px 0px #0e1925;
@@ -67,15 +67,17 @@
   border-left-color: #293741;
   border-bottom-color: #161f2a;
   border-right-color: #161f2a;
-
-  /* border-radius: 3px; */
-  line-height: var(--cubeSize);
+  /* line-height: var(--cubeSize); */
   font-size: 20px;
   font-weight: bold;
   color: white;
   text-align: center;
   overflow: hidden;
   transition: all 1000ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  content: '_';
 }
 
 
