@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import '../styles/landing.css';
+import { array } from 'prop-types';
+ 
 
 export default function Landing({ links }) {
 	const [logoClass, setLogoClass] = useState('landing-logo');
@@ -98,5 +100,5 @@ export default function Landing({ links }) {
 }
 
 Landing.propTypes = {
-	links: Array,
+	links: array,
 };
