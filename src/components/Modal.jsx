@@ -45,11 +45,11 @@ const parseContent = (contentObj) => {
 	return (
 		<div className="display-projects">
 			{contentObj.name && <h1>{contentObj.name}</h1>}
+			<p>{contentObj.desc}</p>
 			<ul>
 				Tech Used:
 				{techUsed}
 			</ul>
-			<p>{contentObj.desc}</p>
 			{features && <ul>Features: {features}</ul>}
 			{isValidHttpUrl(contentObj.link) && <a href={contentObj.link}>Check out the live version!</a>}
 			{!isValidHttpUrl(contentObj.link) && <a>{contentObj.link}</a>}
