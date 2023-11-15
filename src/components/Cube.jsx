@@ -18,8 +18,6 @@ export default function Cube({ showSide, setModal }) {
 	//     setShowSide('cube show-' + side)
 	// }
 
-
-
 	const touchBump = () => {
 		let side = showSide.split('-');
 		setModal(projectsData[side[1]]);
@@ -31,15 +29,17 @@ export default function Cube({ showSide, setModal }) {
 				<div className={showSide}>
 					<div className="cube__face cube__face--front">
 						<span className="cube-text-wrapper">DeskHelp</span>
-						<hr/>
-						<span className="cube-text-content">coming soon</span>
+						<hr />
+						<span className="cube-text-content">Gathering Ideas</span>
 						<span className="cube-text-foot">Click for more...</span>
 					</div>
 					<div className="cube__face cube__face--back">
-						<span className="cube-text-wrapper">Back</span>
-						<hr/>
-						<span className="cube-text-content">Lorem ipsum dolor sit amet consectetur adipisicing.</span>
-						<span className="cube-text-foot">Click for more...</span>
+						{/* <span className="cube-text-wrapper">Game</span>
+						<hr />
+						<span className="cube-text-content">
+							One of the first thing that I ever made
+						</span>
+						<span className="cube-text-foot">Click for more...</span> */}
 					</div>
 					<div className="cube__face cube__face--right">
 						{/* <span className="cube-text-wrapper">CV Maker</span>
@@ -54,20 +54,21 @@ export default function Cube({ showSide, setModal }) {
 						<span className="cube-text-foot">Click for more...</span> */}
 					</div>
 					<div className="cube__face cube__face--top">
-						<span className="cube-text-wrapper">Top</span>
-						<hr/>
-						<span className="cube-text-content">Lorem ipsum dolor sit.</span>
+						<span className="cube-text-wrapper">Blog</span>
+						<hr />
+						<span className="cube-text-content">Work In Progress</span>
 						<span className="cube-text-foot">Click for more...</span>
 					</div>
 					<div className="cube__face cube__face--bottom">
 						<span className="cube-text-wrapper">Click</span>
-						<hr/>
-						<span className="cube-text-content">lorem9</span>
+						<hr />
+						<span className="cube-text-content">
+							Click on the buttons to explore my work
+						</span>
 						<span className="cube-text-foot">Click for more...</span>
 					</div>
 				</div>
 			</div>
-
 		</>
 	);
 }

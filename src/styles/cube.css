@@ -133,10 +133,13 @@ hr {
 }
 
 .cube__face--back {
-  background: linear-gradient(to bottom,
+  /* background: linear-gradient(to bottom,
       #1f2c37,
       #3b3e50,
-      #73678a);
+      #73678a); */
+      background-image: url(../static/game.png);
+      background-position: center;
+      background-size: contain;
 }
 
 .cube__face--left {

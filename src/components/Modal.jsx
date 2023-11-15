@@ -18,7 +18,7 @@ export default function Modal({ content, closeModal }) {
 			}}
 		>
 			<div className="modal-window" ref={outsideDiv}>
-				<div>{displayContent}</div>
+				<>{displayContent}</>
 				<button onClick={() => closeModal(false)}>Back</button>
 			</div>
 		</div>
@@ -31,28 +31,47 @@ Modal.propTypes = {
 };
 
 const parseContent = (contentObj) => {
-	const techUsed = contentObj.tech.map((element) => {
-		const listElement = [];
-		listElement.push(<li key={element}>{element}</li>);
-		return listElement;
-	});
-	const features = contentObj.features.map((element) => {
-		const listElement = [];
-		listElement.push(<li key={element}>{element}</li>);
-		return listElement;
-	});
+	let techUsed = [];
+	if (contentObj.tech) {
+		techUsed = contentObj.tech.map((element) => {
+			const listElement = [];
+			listElement.push(
+				<object
+					className="icon"
+					type="image/svg+xml"
+					data={element}
+					key={element}
+				></object>
+			);
+			return listElement;
+		});
+	}
+	let features = [];
+	if (contentObj.features) {
+		features = contentObj.features.map((element) => {
+			const listElement = [];
+			listElement.push(<li key={element}>{element}</li>);
+			return listElement;
+		});
+	}
 
 	return (
 		<div className="display-projects">
 			{contentObj.name && <h1>{contentObj.name}</h1>}
-			<p>{contentObj.desc}</p>
-			<ul>
-				Tech Used:
-				{techUsed}
-			</ul>
-			{features && <ul>Features: {features}</ul>}
-			{isValidHttpUrl(contentObj.link) && <a href={contentObj.link}>Check out the live version!</a>}
-			{!isValidHttpUrl(contentObj.link) && <a>{contentObj.link}</a>}
+			{contentObj.desc && (
+				<p className="project-description">{contentObj.desc}</p>
+			)}
+			{contentObj.tech && (
+				<div>
+					Tech Used:
+					<div className="tech-list">{techUsed}</div>
+				</div>
+			)}
+			{contentObj.features && <ul className="project-features">Features: {features}</ul>}
+			{isValidHttpUrl(contentObj.link) && (
+				<a href={contentObj.link}>Check out the live version!</a>
+			)}
+			{!isValidHttpUrl(contentObj.link) && <a>Currently not deployed</a>}
 		</div>
 	);
 };

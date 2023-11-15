@@ -53,17 +53,6 @@ export default function Projects({ pointer, setModal }) {
 						<input
 							type="radio"
 							name="side"
-							value="front"
-							checked={selectedSide === 'front'}
-							onChange={(e) => handleChangeSide(e.target.value)}
-							className="visually-hidden"
-						/>
-						<span className="button-text">DeskHelp</span>
-					</label>
-					<label className="button-label">
-						<input
-							type="radio"
-							name="side"
 							value="top"
 							checked={selectedSide === 'top'}
 							onChange={(e) => handleChangeSide(e.target.value)}
@@ -75,12 +64,23 @@ export default function Projects({ pointer, setModal }) {
 						<input
 							type="radio"
 							name="side"
+							value="front"
+							checked={selectedSide === 'front'}
+							onChange={(e) => handleChangeSide(e.target.value)}
+							className="visually-hidden"
+						/>
+						<span className="button-text">DeskHelp</span>
+					</label>
+					<label className="button-label">
+						<input
+							type="radio"
+							name="side"
 							value="back"
 							checked={showSide === 'back'}
 							onChange={(e) => handleChangeSide(e.target.value)}
 							className="visually-hidden"
 						/>
-						<span className="button-text">3 coming soon...</span>
+						<span className="button-text">Game</span>
 					</label>
 					<label className="button-label">
 						<input
@@ -91,7 +91,7 @@ export default function Projects({ pointer, setModal }) {
 							onChange={(e) => handleChangeSide(e.target.value)}
 							className="visually-hidden"
 						/>
-						<span className="button-text">4 coming soon...</span>
+						<span className="button-text">coming soon...</span>
 					</label>
 				</div>
 			</div>
