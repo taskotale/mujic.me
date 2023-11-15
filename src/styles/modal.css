@@ -18,6 +18,7 @@ a {
     border: 1px solid var(--colorTwo);
     padding: 10px;
     border-radius: 5px;
+    margin-top: 2rem;
 }
 
 .modal-window {
@@ -44,7 +45,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: scroll;
 }
 
 .project-description{
@@ -62,15 +62,20 @@ a {
     border-radius: 5px;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .icon {
     height: 40px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .project-features {
-
+    margin-bottom: 2rem;
 }
+
 .project-features > li {
     list-style-position: inside;
 

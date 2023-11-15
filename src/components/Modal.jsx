@@ -71,7 +71,7 @@ const parseContent = (contentObj) => {
 					)}
 				</div>
 				<div>
-					{contentObj.features && <ul className="project-features">Features: {features}</ul>}</div>
+					{contentObj.features && <ul className="project-features"><h3>Features:</h3> {features}</ul>}</div>
 			</div>
 			<div>
 				{isValidHttpUrl(contentObj.link) && (
