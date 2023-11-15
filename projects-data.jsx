@@ -27,8 +27,8 @@ const cvMaker = {
 const bookshelfApp = {
 	name: 'Bookshelf App',
 	tech: [flaskSVG, pythonSVG, bootstrapSVG, jquerySVG, sqliteSVG],
-	link: '',
-	desc: 'Promised my mom that I will find a way to know where are her books!',
+	link: 'http://taskotale.pythonanywhere.com/',
+	desc: 'Promised my mom that I will find a way to know where are her books! \n Still adapting for deployment',
 	features: [
 		'Cataloging all owned books',
         'Keep track of borrowed and already red books',
