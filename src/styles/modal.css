@@ -1,8 +1,8 @@
 .modal {
     z-index: 99;
     position: fixed;
-    height: 100svh;
-    width: 100svw;
+    height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.654);
@@ -32,7 +32,6 @@ a {
     padding: 1rem;
     text-align: center;
     margin: 1rem;
-    max-height: 90%;
 }
 
 .modal-window > button {
@@ -43,7 +42,6 @@ a {
 
 .display-projects {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: scroll;
@@ -63,7 +61,7 @@ a {
     margin: 1rem;
     border-radius: 5px;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .icon {
@@ -71,25 +69,18 @@ a {
 }
 
 .project-features {
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 5px;
-    flex-wrap: wrap;
-    gap: 5px
+
 }
 .project-features > li {
     list-style-position: inside;
-    text-align: right;
+
 }
 
-
-
+@media screen and (max-width: 450px) {
+    .display-projects {
+        flex-direction: column;
+    }
+}
 
 @keyframes popUp {
     0% {
@@ -105,3 +96,4 @@ a {
         opacity: 1;
     }
 }
+
