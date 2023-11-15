@@ -20,7 +20,7 @@ export default function Projects({ pointer, setModal }) {
 	};
 
 	return (
-		<div className="projects-container" ref={pointer}>
+		<div className='projects-container' ref={pointer}>
 			<div className="cube-wrapper">
 				<Cube showSide={showSide} setModal={setModal} />
 			</div>

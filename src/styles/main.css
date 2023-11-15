@@ -26,8 +26,6 @@
 body {
     padding: 0;
     margin: 0;
-    height: 100svh;
-    width: 100svw;
     color: var(--colorTwo);
     background: linear-gradient(0deg, #21303d 40%, #38576c 90%);
 }
@@ -51,6 +49,10 @@ button {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 .test {
