@@ -20,7 +20,7 @@ function App() {
 	}, [modal]);
 
 	return (
-		<div className="no-scroll">
+		<>
 			{modal && <Modal content={modal} closeModal={setModal} />}
 			<div
 				onClick={() => ref1.current.scrollIntoView({ behavior: 'smooth' })}
@@ -35,7 +35,7 @@ function App() {
 			<div ref={ref4} id="3" className="test">
 				4
 			</div>
-		</div>
+		</>
 	);
 }
 

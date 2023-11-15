@@ -78,7 +78,7 @@ a {
 
 .project-features > li {
     list-style-position: inside;
-
+    text-align: right;
 }
 
 @media screen and (max-width: 450px) {
