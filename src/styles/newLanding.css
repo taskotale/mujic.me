@@ -3,11 +3,12 @@
     width: 100svw;
     background-color: var(--colorOne);
     /* Subtle Blueprint Grid */
-    background-image: 
+    background-image:
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
-    position: relative; /* Allows buttons to stick to the bottom */
+    position: relative;
+    /* Allows buttons to stick to the bottom */
     overflow: hidden;
 }
 
@@ -18,14 +19,18 @@
     left: 50%;
     transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(1);
     z-index: 50;
-    will-change: transform; /* Tells browser to prepare GPU */
-    pointer-events: none; /* Allows clicking through the invisible box */
+    will-change: transform;
+    /* Tells browser to prepare GPU */
+    pointer-events: none;
+    /* Allows clicking through the invisible box */
 }
 
 /* The SVG handles the CSS rotation on load */
 .landing-logo {
     animation: rotate-mini 2000ms ease-in-out;
     transform-origin: center;
+    width: clamp(120px, 40vmin, 320px);
+    height: auto;
 }
 
 .nav-container {
@@ -50,7 +55,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
-    pointer-events: auto; /* Re-enables clicking */
+    pointer-events: auto;
+    /* Re-enables clicking */
 }
 
 .sleek-btn:hover {
@@ -60,37 +66,81 @@
     transform: translateY(-3px);
 }
 
-.bg-letters { fill: var(--colorOne); }
-.logo-fullName, .initial-M, .initial-T { fill: var(--colorAccent); }
+.bg-letters {
+    fill: var(--colorOne);
+}
 
-.initial-T { animation: showLetter 2000ms ease-out; }
-.initial-M { animation: slideLetter 2000ms ease-out; }
+.logo-fullName,
+.initial-M,
+.initial-T {
+    fill: var(--colorAccent);
+}
+
+.initial-T {
+    animation: showLetter 2000ms ease-out;
+}
+
+.initial-M {
+    animation: slideLetter 2000ms ease-out;
+}
 
 @keyframes rotate-mini {
-    0% { transform: rotate(-90deg) scale(0.5); }
-    50% { transform: rotate(-90deg) scale(1.5); }
-    100% { transform: rotate(0deg) scale(1); }
+    0% {
+        transform: rotate(-90deg) scale(0.5);
+    }
+
+    50% {
+        transform: rotate(-90deg) scale(1.5);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
 }
 
 @keyframes showLetter {
-    0% { opacity: 0; transform: translateX(-100%); }
-    50% { opacity: 0; transform: translateX(-50%); }
-    100% { opacity: 1; transform: translateX(0%); }
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
 @keyframes slideLetter {
-    0% { opacity: 0; transform: translateX(100%); }
-    50% { opacity: 0; transform: translateX(50%); }
-    100% { opacity: 1; transform: translateX(0%); }
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
 @media screen and (max-width: 600px) {
+
     .nav-container {
         bottom: 8%;
         gap: 1rem;
         width: 90%;
         justify-content: center;
     }
+
     .sleek-btn {
         padding: 10px 15px;
         font-size: 11px;
