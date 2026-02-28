@@ -1,0 +1,99 @@
+:root {
+    --colorOne: #21303d; /* Dark blue */
+    --colorTwo: rgba(238, 200, 175, 1); /* Soft peach */
+}
+
+/* Custom Fonts */
+@font-face {
+    font-family: 'Zen';
+    src: url('../fonts/ZenDots-Regular.ttf');
+}
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron/Orbitron-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-Thin.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.nl-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--colorTwo);
+    padding: 20px;
+}
+
+.nl-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.nl-name, .nl-picture, .nl-projects, .nl-about, .nl-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    background-color: var(--colorOne);
+    color: var(--colorTwo);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Zen', cursive;
+    text-align: center;
+}
+
+/* Adjusting the grid layout for larger screens */
+@media (min-width: 768px) {
+    .nl-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for larger screens */
+        grid-template-areas:
+            "name picture"
+            "projects projects"
+            "about contact";
+    }
+
+    .nl-name { grid-area: name; }
+    .nl-picture { grid-area: picture; }
+    .nl-projects { grid-area: projects; }
+    .nl-about { grid-area: about; }
+    .nl-contact { grid-area: contact; }
+}
+
+/* Hover effects */
+.nl-name:hover, .nl-picture:hover, .nl-projects:hover, .nl-about:hover, .nl-contact:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.nl-picture {
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 50%; /* Creates a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures content fits within the rounded edges */
+    /* Adjust width and height accordingly, ensuring they are equal for a perfect circle */
+    width: 150px; /* Example fixed width */
+    height: 150px; /* Example fixed height */
+    margin: 0 auto; /* Centering if in a grid or flexbox */
+}
+
