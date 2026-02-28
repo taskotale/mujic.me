@@ -1,59 +1,59 @@
-import flaskSVG from './src/static/icons/flask.svg'
-import pythonSVG from './src/static/icons/python.svg'
-import bootstrapSVG from './src/static/icons/bootstrap-logo.svg'
-import jquerySVG from './src/static/icons/jquery.svg'
-import sqliteSVG from './src/static/icons/sqlite.svg'
-import reactSVG from './src/static/icons/react.svg'
-import cssSVG from './src/static/icons/css-3.svg'
-import jsSVG from './src/static/icons/javascript-js.svg'
-import viteSVG from './src/static/icons/Vitejs-logo.svg'
-import vercelSVG from './src/static/icons/vercel.svg'
-import htmlSVG from './src/static/icons/HTML5.svg'
+import flaskSVG from './src/static/icons/flask.svg';
+import pythonSVG from './src/static/icons/python.svg';
+import bootstrapSVG from './src/static/icons/bootstrap-logo.svg';
+import jquerySVG from './src/static/icons/jquery.svg';
+import sqliteSVG from './src/static/icons/sqlite.svg';
+import reactSVG from './src/static/icons/react.svg';
+import cssSVG from './src/static/icons/css-3.svg';
+import jsSVG from './src/static/icons/javascript-js.svg';
+import viteSVG from './src/static/icons/Vitejs-logo.svg';
+import vercelSVG from './src/static/icons/vercel.svg';
+import htmlSVG from './src/static/icons/HTML5.svg';
 
 const cvMaker = {
 	name: 'CV Maker',
-	tech: [reactSVG, jsSVG , cssSVG, viteSVG, vercelSVG],
+	tech: [reactSVG, jsSVG, cssSVG, viteSVG, vercelSVG],
 	link: 'https://cv-maker-tahir-mujics-projects.vercel.app/',
-	desc: 'I needed a CV so I build an app that is able to change quickly sections in my resume and download it as PDF',
+	desc: 'Instead of manually editing text documents every time I needed a tailored resume, I built a modular system. It allows me to dynamically update data points, swap configurations, and instantly generate a clean PDF.',
 	features: [
-		'Quick change of any field in resume',
-		'Unlimited addition of highlight sections like skills, languages...',
-		'Customizable name of highlights',
-		'Change color scheme',
-		'Side preview on wider screens',
-		'Change layout(coming soon)',
+		'Real-time modular editing for all data fields',
+		'Dynamic generation of highlight sections (skills, languages)',
+		'Customizable data mapping and naming conventions',
+		'Adjustable color schemes and themes',
+		'Live side-by-side preview on wider viewports',
+		'Scalable architecture for upcoming layout swaps',
 	],
 };
+
 const bookshelfApp = {
 	name: 'Bookshelf App',
 	tech: [flaskSVG, pythonSVG, bootstrapSVG, jquerySVG, sqliteSVG],
 	link: 'http://taskotale.pythonanywhere.com/',
-	desc: 'Promised my mom that I will find a way to know where are her books! \n Still adapting for deployment',
+	desc: 'My mom was losing track of her physical library, so I built a digital inventory management system. It maps physical space to a digital database to keep a strict log of her collection. (Currently adapting for a new deployment).',
 	features: [
-		'Cataloging all owned books',
-        'Keep track of borrowed and already red books',
-		'Organizing per book location per room and exact shelf',
-		'Search with ISBN, barcode image or simply by name',
-        'Automatic addition of book cover and details',
-        'Easy find on Amazon and Google Books'
+		'Granular spatial tracking (Room > Bookshelf > Exact Shelf)',
+		'Logistics tracking for borrowed and finished books',
+		'Automated metadata and cover fetching via API',
+		'Multi-input search query (ISBN, barcode image, or text)',
+		'External API hooks to Amazon and Google Books',
 	],
 };
 
 const deskHelp = {
 	name: 'DeskHelp',
-	desc: 'My friend developer gave me the idea to make a program that could help bridge some basic tasks.'
-}
+	desc: 'A workflow tool built to bridge the gap between repetitive basic tasks. It acts as a digital assistant, optimizing the small operational bottlenecks in daily computer use.',
+};
 
 const myBlog = {
-	name: 'Undecided yet 🤔',
-	desc: "I'm planning to showcase a website, potentially a clone, but my primary focus is to start documenting my journey in software development and explore topics that interest me in general."
-}
+	name: 'System Logs 🤔',
+	desc: "I collect a lot of 'useless' knowledge and dive deep into how things work. This will be the digital notebook where I document my technical logic, software experiments, and the operational systems I explore.",
+};
 
 const game = {
 	name: 'Tic Tac Toe',
-	desc: 'One of the first things that I ever made that I like and proud of after making the logic for invincible computer player. I will revisit this to make it look nicer and run smoother.',
-	tech: [htmlSVG, cssSVG, jsSVG]
-}
+	desc: 'One of my earliest projects, built purely to figure out the logic behind an "invincible" computer opponent. It was my first real dive into algorithms and predicting behavior. Next up: refactoring the UI to match the precision of the logic.',
+	tech: [htmlSVG, cssSVG, jsSVG],
+};
 
 const projectsData = {
 	front: deskHelp,
@@ -62,8 +62,7 @@ const projectsData = {
 	left: bookshelfApp,
 	top: myBlog,
 	bottom:
-		'First click buttons on the side, than you can click again on the cube!',
+		'Select a project from the navigation, then click the cube to see how it works.',
 };
 
 export default projectsData;
-

@@ -1,4 +1,4 @@
-.modal {
+/* .modal {
     z-index: 99;
     position: fixed;
     height: 100%;
@@ -10,8 +10,8 @@
     justify-content: center;
     align-items: center;
     animation: popUp 500ms ease-out;    
-}
-
+} */
+/* 
 a {
     text-decoration: none;
     color: var(--colorTwo);
@@ -19,9 +19,9 @@ a {
     padding: 10px;
     border-radius: 5px;
     margin-top: 2rem;
-}
+} */
 
-.modal-window {
+/* .modal-window {
     background-color: var(--colorOne);
     border-radius: 10px;
     display: flex;
@@ -33,61 +33,60 @@ a {
     padding: 1rem;
     text-align: center;
     margin: 1rem;
-}
+} */
 
-.modal-window > button {
+/* .modal-window > button {
     color: var(--colorTwo);
     background-color: var(--colorOne);
     margin-top: 2svh;
-}
+} */
 
-.display-projects {
+/* .display-projects {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.project-description{
+/* .project-description{
     padding: 1rem;
     margin: 1rem;
-}
+} */
 
-.tech-list {
+/* .tech-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: white; */
     padding: 1rem;
     margin: 1rem;
     border-radius: 5px;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 2rem;
-}
+} */
 
-.icon {
+/* .icon {
     height: 40px;
     background-color: white;
     padding: 5px;
     border-radius: 5px;
-}
+} */
 
-.project-features {
+/* .project-features {
     margin-bottom: 2rem;
-}
+} */
 
-.project-features > li {
+/* .project-features > li {
     list-style-position: inside;
     text-align: right;
-}
+} */
 
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
     .display-projects {
         flex-direction: column;
     }
-}
+} */
 
-@keyframes popUp {
+/* @keyframes popUp {
     0% {
         opacity: 0;
     }
@@ -100,5 +99,175 @@ a {
     100% {
         opacity: 1;
     }
+} */
+
+.modal {
+    z-index: 100;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px); /* Blurs the cube in the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 300ms ease-out;    
 }
 
+.modal-window {
+    background-color: rgba(15, 15, 15, 0.85); /* Dark glass look */
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8), inset 0 0 20px rgba(176, 90, 62, 0.1);
+    padding: 2.5rem;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: left;
+    animation: popUp 400ms cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    color: var(--colorTwo);
+}
+
+/* Sleek custom scrollbar for the modal */
+.modal-window::-webkit-scrollbar { width: 8px; }
+.modal-window::-webkit-scrollbar-track { background: transparent; }
+.modal-window::-webkit-scrollbar-thumb { background: var(--colorAccent); border-radius: 4px; }
+
+.modal-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Creates a 2-column layout for wide screens */
+.display-projects {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+}
+
+.project-title {
+    color: var(--colorAccent);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #d1d5db;
+}
+
+.section-subtitle {
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    /* Keeps a light background so dark SVG logos (like Github or Python) remain visible */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 6px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.icon:hover { transform: translateY(-3px); }
+
+.project-features {
+    list-style: none;
+    padding: 0;
+}
+
+.project-features > li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Custom bullet points using the rust accent */
+.project-features > li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--colorAccent);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.live-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.offline-status {
+    color: #888;
+    font-style: italic;
+}
+
+/* Pins the close button to the top right */
+.close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 8px 16px;
+}
+
+.modal-string {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+/* Mobile responsive fixes */
+@media screen and (max-width: 768px) {
+    .display-projects {
+        grid-template-columns: 1fr; /* Stacks the text and features vertically */
+    }
+    .modal-window {
+        padding: 1.5rem;
+    }
+    .close-btn {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popUp {
+    0% { opacity: 0; transform: scale(0.95) translateY(20px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
