@@ -23,13 +23,15 @@
   height: 120%;
   border-radius: 40%;
   transform: rotateX(-78deg) translateY(105px) translateZ(150px);
-  background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1) 50%);
+  /* background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1) 50%); */
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
   bottom: -15%;
   left: -5%;
   z-index: -1;
-  box-shadow:
+  /* box-shadow:
     -5px 5px 15px rgba(0, 0, 0, 0.15),
-    0 1px 10px rgba(0, 0, 0, 0.1);
+    0 1px 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 10px 30px rgba(176, 90, 62, 0.15);
 }
 
 .scale {
@@ -50,10 +52,24 @@
   position: absolute;
   width: var(--cubeSize);
   height: var(--cubeSize);
-  border: 3px solid;
+  /* border: 3px solid; */
   box-shadow:
     -1px -1px 0px rgba(46, 68, 86, 0.5),
-    1px 1px 0px rgba(14, 25, 37, 0.5);
+    1px 1px 0px rgba(14, 25, 37, 0.5); 
+
+  /* new design */
+  border: 2px solid var(--glass-border);
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(176, 90, 62, 0.2); */
+  background-color: var(--colorOne);
+  color: var(--colorTwo);
+  text-align: center;
+  overflow: hidden;
+  transition: all 1000ms;
+  /* Adds a slight blur behind the cube faces if they have transparency */
+  backdrop-filter: blur(5px);
+
+  /* new design ends */
+
   border-top-color: #2b3745;
   border-left-color: #2b3745;
   border-bottom-color: #1a242f;
@@ -70,10 +86,16 @@
 }
 
 hr {
+  /* width: 80%;
+  height: 1px;
+  border: none;
+  background-color: var(--colorTwo); */
+
   width: 80%;
   height: 1px;
   border: none;
-  background-color: var(--colorTwo);
+  background-color: var(--colorAccent);
+  /* Rust colored separator */
 }
 
 .cube-text-wrapper {
@@ -84,6 +106,7 @@ hr {
 .cube-text-content {
   font-size: medium;
 }
+
 .cube-text-foot {
   font-size: x-small;
 }
@@ -114,22 +137,26 @@ hr {
   transform: translateZ(var(--cubeHalf)) rotateX(90.1deg);
 }
 
+
 .cube__face--right {
   /* background: linear-gradient(to bottom,
       #1f2c37,
       #3a4a58,
       #5a7a89); */
-      background-image: url(../static/cvMaker1.png);
-      background-position: center;
-      background-size: contain;
+  background-image: url(../static/cvMaker1.png);
+  background-position: center;
+  /* background-size: contain; */
+  background-size: cover;
+  background-position: center;
+  /* This dims the image slightly so white text is readable */
 }
 
 .cube__face--front {
-  background: linear-gradient(to bottom,
+  /* background: linear-gradient(to bottom,
       #1f2c37,
       #3b4450,
-      #808b97);
-
+      #808b97); */
+  background: linear-gradient(to bottom, #111, #1a1a1a, #0a0a0a);
 }
 
 .cube__face--back {
@@ -137,9 +164,13 @@ hr {
       #1f2c37,
       #3b3e50,
       #73678a); */
-      background-image: url(../static/game.png);
-      background-position: center;
-      background-size: contain;
+  background: linear-gradient(to bottom, #111, #1a1a1a, #0a0a0a);
+  background-image: url(../static/game.png);
+  background-position: center;
+  /* background-size: contain; */
+  background-size: cover;
+  background-position: center;
+  /* This dims the image slightly so white text is readable */
 }
 
 .cube__face--left {
@@ -147,25 +178,31 @@ hr {
       #1f2c37,
       #2c3c55,
       #4162a1); */
-      background-image: url(../static/bookshelf.png);
-      background-position: center;
-      background-size: contain;
+  background: linear-gradient(to bottom, #111, #1a1a1a, #0a0a0a);
+  background-image: url(../static/bookshelf.png);
+  background-position: center;
+  /* background-size: contain; */
+  background-size: cover;
+  background-position: center;
+  /* This dims the image slightly so white text is readable */
+
+
 }
 
 .cube__face--top {
-  background: linear-gradient(to bottom,
+  /* background: linear-gradient(to bottom,
       #1f2c37,
       #3d424f,
-      #886870);
-
+      #886870); */
+  background: linear-gradient(to bottom, #111, #1a1a1a, #0a0a0a);
 }
 
 .cube__face--bottom {
-  background: linear-gradient(to bottom,
+  /* background: linear-gradient(to bottom,
       #1f2c37,
       #354855,
-      #5a8aa1);
-
+      #5a8aa1); */
+  background: linear-gradient(to bottom, #111, #1a1a1a, #0a0a0a);
 }
 
 .cube__face--front {

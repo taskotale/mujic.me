@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import Landing from './components/Landing.jsx';
+// import Landing from './components/Landing.jsx';
 import Projects from './components/Projects.jsx';
 import Modal from './components/Modal.jsx';
 import NewLanding from './components/newLanding.jsx';

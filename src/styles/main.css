@@ -1,6 +1,14 @@
-:root {
+/* :root {
     --colorOne: #21303d;
     --colorTwo: rgba(238, 200, 175, 255)
+} */
+:root {
+    /* new design */
+    --colorOne: #0a0a0a; /* Deep, sleek black */
+    --colorTwo: #f4f4f5; /* Crisp off-white for text */
+    --colorAccent: #b05a3e; /* Your signature rust color */
+    --glass-bg: rgba(15, 15, 15, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
 }
 
 @font-face {

@@ -1,99 +1,98 @@
-:root {
-    --colorOne: #21303d; /* Dark blue */
-    --colorTwo: rgba(238, 200, 175, 1); /* Soft peach */
-}
-
-/* Custom Fonts */
-@font-face {
-    font-family: 'Zen';
-    src: url('../fonts/ZenDots-Regular.ttf');
-}
-@font-face {
-    font-family: 'Orbitron';
-    src: url('../fonts/Orbitron/Orbitron-VariableFont_wght.ttf');
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/static/Montserrat-Thin.ttf');
-}
-
-* {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
-    margin: 0;
-    padding: 0;
-}
-
-body, html {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-}
-
-.nl-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: var(--colorTwo);
-    padding: 20px;
-}
-
-.nl-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 20px;
-    max-width: 800px;
-    width: 100%;
-}
-
-.nl-name, .nl-picture, .nl-projects, .nl-about, .nl-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 150px;
+.landing-main {
+    height: 100svh;
+    width: 100svw;
     background-color: var(--colorOne);
-    color: var(--colorTwo);
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'Zen', cursive;
-    text-align: center;
+    /* Subtle Blueprint Grid */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative; /* Allows buttons to stick to the bottom */
+    overflow: hidden;
 }
 
-/* Adjusting the grid layout for larger screens */
-@media (min-width: 768px) {
-    .nl-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for larger screens */
-        grid-template-areas:
-            "name picture"
-            "projects projects"
-            "about contact";
-    }
-
-    .nl-name { grid-area: name; }
-    .nl-picture { grid-area: picture; }
-    .nl-projects { grid-area: projects; }
-    .nl-about { grid-area: about; }
-    .nl-contact { grid-area: contact; }
+/* NEW: The wrapper handles JS scrolling */
+.logo-scroll-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(1);
+    z-index: 50;
+    will-change: transform; /* Tells browser to prepare GPU */
+    pointer-events: none; /* Allows clicking through the invisible box */
 }
 
-/* Hover effects */
-.nl-name:hover, .nl-picture:hover, .nl-projects:hover, .nl-about:hover, .nl-contact:hover {
-    transform: scale(1.05) translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+/* The SVG handles the CSS rotation on load */
+.landing-logo {
+    animation: rotate-mini 2000ms ease-in-out;
+    transform-origin: center;
 }
 
-.nl-picture {
-    font-family: 'Orbitron', sans-serif;
-    border-radius: 50%; /* Creates a circle */
+.nav-container {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Ensures content fits within the rounded edges */
-    /* Adjust width and height accordingly, ensuring they are equal for a perfect circle */
-    width: 150px; /* Example fixed width */
-    height: 150px; /* Example fixed height */
-    margin: 0 auto; /* Centering if in a grid or flexbox */
+    gap: 2rem;
+    z-index: 10;
 }
 
+.sleek-btn {
+    padding: 12px 30px;
+    background-color: rgba(15, 15, 15, 0.7);
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    color: var(--colorTwo);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    pointer-events: auto; /* Re-enables clicking */
+}
+
+.sleek-btn:hover {
+    border-color: var(--colorAccent);
+    color: var(--colorAccent);
+    box-shadow: 0 0 15px rgba(176, 90, 62, 0.2);
+    transform: translateY(-3px);
+}
+
+.bg-letters { fill: var(--colorOne); }
+.logo-fullName, .initial-M, .initial-T { fill: var(--colorAccent); }
+
+.initial-T { animation: showLetter 2000ms ease-out; }
+.initial-M { animation: slideLetter 2000ms ease-out; }
+
+@keyframes rotate-mini {
+    0% { transform: rotate(-90deg) scale(0.5); }
+    50% { transform: rotate(-90deg) scale(1.5); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes showLetter {
+    0% { opacity: 0; transform: translateX(-100%); }
+    50% { opacity: 0; transform: translateX(-50%); }
+    100% { opacity: 1; transform: translateX(0%); }
+}
+
+@keyframes slideLetter {
+    0% { opacity: 0; transform: translateX(100%); }
+    50% { opacity: 0; transform: translateX(50%); }
+    100% { opacity: 1; transform: translateX(0%); }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-container {
+        bottom: 8%;
+        gap: 1rem;
+        width: 90%;
+        justify-content: center;
+    }
+    .sleek-btn {
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+}

@@ -1,12 +1,20 @@
 .projects-container {
-    display: grid;
+    /* display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     align-items: center;
     font-size: xx-large;
     height: 100svh;
     width: 100svw;
-    background: linear-gradient(0deg, #38576c 40%, #21303d 90%);
+    background: linear-gradient(0deg, #38576c 40%, #21303d 90%); */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    height: 100svh;
+    width: 100svw;
+    /* A deep, dark radial gradient to spotlight the cube */
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
 }
 
 .cube-wrapper {
@@ -32,7 +40,7 @@
 }
 
 .button-text {
-    padding: 10px 20px;
+    /* padding: 10px 20px;
     background-color: var(--colorOne);
     border: none;
     border-radius: 5px;
@@ -41,7 +49,19 @@
     cursor: pointer;
     margin: 2px;
     transition: background-color 0.3s, transform 0.3s;
+    width: 100%; */
+    padding: 12px 24px;
+    background-color: transparent;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--colorTwo);
+    font-size: 16px;
+    cursor: pointer;
+    margin: 4px;
+    transition: all 0.3s ease;
     width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .visually-hidden {
@@ -49,16 +69,23 @@
 }
 
 .button-label input:checked+.button-text {
-    background-color: var(--colorTwo);
+    /* background-color: var(--colorTwo);
     color: var(--colorOne);
     transform: scale(1.05);
-    border: 1px solid var(--colorOne);
+    border: 1px solid var(--colorOne); */
+    background-color: var(--colorAccent);
+    color: #fff;
+    transform: scale(1.02);
+    border: 1px solid var(--colorAccent);
+    box-shadow: 0 4px 15px rgba(176, 90, 62, 0.3);
 }
 
 .button-text:hover {
-    background-color: var(--colorTwo);
+    /* background-color: var(--colorTwo);
     color: var(--colorOne);
-    transform: scale(1.05);
+    transform: scale(1.05); */
+    border-color: var(--colorAccent);
+    color: var(--colorAccent);
 }
 
 
